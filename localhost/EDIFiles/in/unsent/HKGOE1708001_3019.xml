@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<ShippingInstructions>
+ <InterchangeControlHeader>
+     <ControlNumber>3019</ControlNumber>
+     <SenderId>CONSOLINT</SenderId>
+     <ReceiverId>CARGOSMART</ReceiverId>
+     <DateTime>20170904172833</DateTime>
+     <ControlVersion>00401</ControlVersion>
+     <UsageIndicator>P</UsageIndicator>
+     <MessageSessionId>3019</MessageSessionId>
+ </InterchangeControlHeader>
+ <SIBillOfLading>
+     <GeneralInfo>
+         <TransactionInfo>
+             <BatchNumber>3019</BatchNumber>
+             <MessageSender>CONSOLINT</MessageSender>
+             <MessageRecipient>CARGOSMART</MessageRecipient>
+             <MessageID>SIXML</MessageID>
+             <DateCreated TimeZone="HKT">20170904172833</DateCreated>
+             <DataSource>0</DataSource>
+             <Version>1</Version>
+         </TransactionInfo>
+         <ActionType>NEW</ActionType>
+         <SIReferenceNumber>HKGOE1708001_0</SIReferenceNumber>
+         <SCAC>OOLU</SCAC>
+         <OwnedBy>CONSOLINT</OwnedBy>
+     </GeneralInfo>
+     <BLDetails>
+         <BookingInfo>
+             <BookingNumber>2590988933-5</BookingNumber>
+             <BookingNumber>2590988934</BookingNumber>
+         </BookingInfo>
+         <UserReferences>
+             <References>
+                 <ReferenceNumber>HKGOE1708001_0</ReferenceNumber>
+                 <ReferenceType>CR</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2590988933-5</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2590988934</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2590988933-5</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2590988934</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>HKGOE1708001_0</ReferenceNumber>
+                 <ReferenceType>SI</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>PE164436</ReferenceNumber>
+                 <ReferenceType>CT</ReferenceType>
+             </References>
+         </UserReferences>
+         <LegalParties>
+             <Party>
+                 <PartyType>CA</PartyType>
+                 <PartyName><![CDATA[ORIENT OVERSEAS CONTAINER LINE]]></PartyName>
+                 <PartyLocation>
+                     <Address>
+                         <AddressLines><![CDATA[LIMITED 2/F,HARBOUR CENTRE,25]]></AddressLines>
+                         <AddressLines><![CDATA[HARBOUR ROAD, WANCHAI,HONG KONG]]></AddressLines>
+                     </Address>
+                 </PartyLocation>
+             </Party>
+             <Party>
+                 <PartyType>SH</PartyType>
+                 <PartyName><![CDATA[CONSOLIDATOR INTERNATIONAL CO., LTD]]></PartyName>
+                 <PartyLocation>
+                     <Address>
+                         <AddressLines><![CDATA[ROOM 10, 10/F APEC PLAZA, NO 49]]></AddressLines>
+                         <AddressLines><![CDATA[HOI YUEN ROAD, KWUN TONG, KOWLOON,]]></AddressLines>
+                         <AddressLines><![CDATA[HONG KONG]]></AddressLines>
+                     </Address>
+                 </PartyLocation>
+             </Party>
+             <Party>
+                 <PartyType>CN</PartyType>
+                 <PartyName><![CDATA[U.S. GROUP CONSOLIDATOR INC. (LAX)]]></PartyName>
+                 <PartyLocation>
+                     <Address>
+                         <AddressLines><![CDATA[618 GLASGOW AVENUE INGLEWOOD CA]]></AddressLines>
+                         <AddressLines><![CDATA[90301 USA TEL: 310 568 0008 FAX:]]></AddressLines>
+                         <AddressLines><![CDATA[310-568 0529]]></AddressLines>
+                     </Address>
+                 </PartyLocation>
+             </Party>
+             <Party>
+                 <PartyType>N1</PartyType>
+                 <PartyName><![CDATA[SAME AS CONSIGNEE]]></PartyName>
+             </Party>
+         </LegalParties>
+         <RouteInformation>
+             <VesselVoyageInformation>
+                 <VoyageNumberDirection>111</VoyageNumberDirection>
+                 <VesselInformation>
+                     <VesselName>OOCL ABILITY</VesselName>
+                 </VesselInformation>
+                 <External>
+                     <VoyageNumber>111</VoyageNumber>
+                 </External>
+                 <VesselVoyageText>OOCL ABILITY / 111</VesselVoyageText>
+                 <TrafficMode>
+                     <OutBound>FCL</OutBound>
+                     <InBound>FCL</InBound>
+                 </TrafficMode>
+                 <Haulage>Pier-to-Pier</Haulage>
+             </VesselVoyageInformation>
+             <Location>
+                 <FunctionCode>POR</FunctionCode>
+                 <LocationName>TEST123451123</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>AE123</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>POL</FunctionCode>
+                 <LocationName>TEST123451123</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>AE123</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>POD</FunctionCode>
+                 <LocationName>TEST123451123</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>AE123</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>FND</FunctionCode>
+                 <LocationName>TEST123451123</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>AE123</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+         </RouteInformation>
+         <EquipmentInformation>
+             <Containers>
+                 <AssociatedBookingNumber>2590988933-5</AssociatedBookingNumber>
+                 <ContainerType>40HQ</ContainerType>
+                 <ContainerNumber CheckDigit="4">OOLU875755</ContainerNumber>
+                 <SealNumber Type="CA">OOLDXL7725</SealNumber>
+                 <Package Type="20">489</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">6392.200</Weight>
+                 <Volume Units="CBM">60.540</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>2590988934</AssociatedBookingNumber>
+                 <ContainerType>40HQ</ContainerType>
+                 <ContainerNumber CheckDigit="3">OOLU989366</ContainerNumber>
+                 <SealNumber Type="CA">OOLDXL3964</SealNumber>
+                 <Package Type="20">584</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">5689.700</Weight>
+                 <Volume Units="CBM">62.650</Volume>
+             </Containers>
+         </EquipmentInformation>
+         <CargoInformation>
+             <CargoItems>
+                 <CargoNature>GC</CargoNature>
+                 <Package Type="20">1073</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">12081.900</Weight>
+                 <Volume Units="CBM">123.190</Volume>
+                 <CargoDescription>
+                     <DescriptionLine><![CDATA["NO WOOD PACKAGING MATERIAL IS USED IN THE ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[SHIPMENT"]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA["THIS SHIPMENT CONTAINS SOLID WOOD PACKAGING ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[MATERIALS & FUMIGATED AS PER "IPPC"]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[11111&]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[22222&]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[LOCAL CHARGE && AMS FEE PREPAID AT HK]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA["THIS SHIPMENT CONTAINS SOLID WOOD PACKING ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[MATERIALS (WPM) & FUMIGATED AS PER ISPM #15"]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[100% PU HANDBAG ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[100% PU BACKPACK ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[100% VELVET BACKPACK]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[100% VELVET BACKPACK]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[100% VELVET BACKPACK]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[100% PU HANDBAG ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[100% PU CROSSBODY BAG ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[100% PU COSMETIC BAG ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[HB/L:SZLAX1707191]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[SCAC:USGR]]></DescriptionLine>
+                 </CargoDescription>
+                 <MarksAndNumbers>
+                     <MarksAndNumbersLine><![CDATA[CHARMING CHARLIE]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[ROSS]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[CHARMING CHARLIE]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[TJ MAXX]]></MarksAndNumbersLine>
+                 </MarksAndNumbers>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2590988934</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="3">OOLU989366</ContainerNumber>
+                     <Package Type="20">584</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">5689.700</Weight>
+                     <Volume Units="CBM">62.650</Volume>
+                 </CargoDetails>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2590988933-5</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="4">OOLU875755</ContainerNumber>
+                     <Package Type="20">489</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">6392.200</Weight>
+                     <Volume Units="CBM">60.540</Volume>
+                 </CargoDetails>
+             </CargoItems>
+         </CargoInformation>
+     </BLDetails>
+     <SummaryDetails>
+         <BLInformation BLType="SWB" FreightType="FreightedCollect">
+             <BLNumber>2590988933-5</BLNumber>
+             <OriginalBL>
+                 <ModeOfTransmission>EDI</ModeOfTransmission>
+             </OriginalBL>
+             <PaymentStatus>Collect</PaymentStatus>
+             <Remarks>
+                 <RemarksLines><![CDATA[WE WILL ARRANGE SETTLE PAYMENT AND COLLECT SEAWAY BILL AT HKG]]></RemarksLines>
+                 <RemarksLines><![CDATA[SUBMIT AMS BY OURSELVES AND AMS FEE PREPAID AT HKG]]></RemarksLines>
+                 <RemarksLines><![CDATA[GP A ]]></RemarksLines>
+                 <RemarksLines><![CDATA[COMM.:BAGS]]></RemarksLines>
+             </Remarks>
+         </BLInformation>
+         <PaperWork>
+             <RequestedDocuments DocumentType="SWB" FreightType="FreightCollect">
+                 <NoOfCopies>3</NoOfCopies>
+                 <ModeOfTransmission>EDI</ModeOfTransmission>
+             </RequestedDocuments>
+         </PaperWork>
+     </SummaryDetails>
+ </SIBillOfLading>
+</ShippingInstructions>

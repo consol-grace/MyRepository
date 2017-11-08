@@ -1,0 +1,5 @@
+[7-31 17:41:52]     UICONTROLS  1:    LOT NO: HKGDM1604001    SYS: DM     company: txtCompany
+
+2:    lot: HKGDM1604001  SYS: DM | 2017-08-31 05:48:34
+-----------------------
+

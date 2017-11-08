@@ -1,0 +1,1 @@
+exec web_center.USGROUP_OPERATION_TEST.dbo.FW_UserManager_SP  @option = 'update1',@username = 'GRACE',@rowid = null,@email = '245135336@qq.com',@tel = '',@fax = '',@ext = '',@NameCHS = 'GRACE',@NameENG = 'GRACE'

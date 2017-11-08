@@ -1,0 +1,694 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#333333;
+	border:0;}
+
+td {font-family: Arial, Helvetica, sans-serif;}
+th {font-family: Arial, Helvetica, sans-serif;}
+
+.font_11px{
+font-family:Arial, Helvetica, sans-serif; 
+font-size:11px; 
+color:#333333;
+}
+
+.font_11px_gray{
+font-family:Arial, Helvetica, sans-serif; 
+font-size:11px;
+color:#666666;}
+
+.font_11bold_1542af{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+color:#1542af;
+}
+
+.font_11bold{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+color:#333333;
+}
+
+.font_12px{
+font-family:Arial, Helvetica, sans-serif; 
+font-size:12px; 
+color:#333333;
+font-weight:bold;}
+
+.font_12bold{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#1542af;
+font-weight:bold;
+}
+
+.font_14px{
+font-family:Arial, Helvetica, sans-serif; 
+font-size:14px; 
+color:#333333;
+font-weight:bold;}
+
+.link_13bold a{
+font-family:Arial, Helvetica, sans-serif; 
+font-size:11px; 
+color:#333333;
+font-weight:bold;
+text-decoration:none;}
+.link_13bold a:hover{
+font-family:Arial, Helvetica, sans-serif; 
+font-size:11px; 
+color:#000000;
+font-weight:bold;
+text-decoration:underline}
+
+/*nav_btn*/
+.nav_btn a{
+font-family:Arial, Helvetica, sans-serif;
+display:block; 
+text-align:left;
+padding-left:40px;
+text-decoration:none; 
+width:80px; 
+height:40px; 
+color:#000; 
+background-image:url(../images/nav_btn_1.png);
+line-height:40px; 
+font-size:12px;
+font-weight:bold;
+}
+.nav_btn a:hover{
+font-family:Arial, Helvetica, sans-serif;
+display:block; 
+text-align:left;
+padding-left:40px;
+text-decoration:none; 
+width:80px; 
+height:40px; 
+color:#000; 
+background-image:url(../images/nav_btn_2.png);
+line-height:40px; 
+font-size:12px;
+font-weight:bold;
+}
+
+/*nav_btn_01*/
+.nav_btn_01 a{ 
+font-family:Arial, Helvetica, sans-serif;
+display:block; 
+text-align:left;
+padding-left:40px; 
+text-decoration:none; 
+width:120px; 
+height:40px; 
+color:#000; 
+background-image:url(../images/nav_btn_01.png);
+line-height:40px; 
+font-size:12px;
+font-weight:bold;
+}
+.nav_btn_01 a:hover{
+font-family:Arial, Helvetica, sans-serif;
+display:block; 
+text-align:left;
+padding-left:40px;
+text-decoration:none; 
+width:120px; 
+height:40px; 
+color:#000; 
+background-image:url(../images/nav_btn_02.png);
+line-height:40px; 
+font-size:12px;
+font-weight:bold;
+}
+
+/*text_bg*/
+.text_bg a{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+text-decoration:none;
+text-align:center;
+padding-top:70px;
+color:#000;
+height:40px;
+display:block;
+background:url(../images/text_bg_01.jpg);
+}
+.text_bg a:hover{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+text-decoration:none;
+text-align:center;
+padding-top:70px;
+color:#000;
+height:40px;
+display:block;
+background:url(../images/text_bg_02.jpg);
+}
+/*nav_left 一级菜单*/
+.nav_left a{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+font-weight:bold;
+color:#000;
+text-decoration:none;
+background-position: 0px;
+background-repeat: no-repeat;
+width:160px;
+
+padding-top:8px;
+padding-bottom:10px;
+background-attachment: scroll;
+}
+.nav_left a:hover{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+font-weight:bold;
+color:#000;
+text-decoration:none;
+background:url(../images/nav_left/btn_bg_1.jpg);
+background-position: 0px;
+background-repeat: no-repeat;
+width:160px;
+
+padding-top:8px;
+padding-bottom:10px;
+background-attachment: scroll;
+}
+.nav_left_1 a{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+font-weight:bold;
+color:#000;
+text-decoration:none;
+background:url(../images/nav_left/btn_bg_2.jpg);
+background-position: 0px;
+background-repeat: no-repeat;
+width:160px;
+padding-top:8px;
+padding-bottom:10px;
+background-attachment: scroll;
+}
+
+/*nav_left_01 二级菜单*/
+.nav_left_01 a{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#000;
+text-decoration:none;
+background-position: 0px;
+background-repeat: no-repeat;
+width:160px;
+padding-top:8px;
+padding-bottom:10px;
+background-attachment: scroll;
+}
+.nav_left_01 a:hover{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#000;
+text-decoration:none;
+background:url(../images/nav_left/btn_bg_1.jpg);
+background-position: 0px;
+background-repeat: no-repeat;
+width:160px;
+padding-top:8px;
+padding-bottom:10px;
+background-attachment: scroll;
+}
+.nav_left_001 a{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#000;
+text-decoration:none;
+background:url(../images/nav_left/btn_bg_2.jpg);
+background-position: 0px;
+background-repeat: no-repeat;
+width:160px;
+padding-top:8px;
+padding-bottom:10px;
+background-attachment: scroll;
+}
+
+.ico_home a{
+display:block;
+background-image:url(../images/ico_home.jpg);
+height:27px;
+width:45px;
+line-height:27px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:10px;
+color:#FFFFFF;
+text-decoration:none;
+text-align:left;
+padding-left:25px;
+}
+
+.ico_home a:hover{
+display:block;
+background-image:url(../images/ico_home_1.jpg);
+height:27px;
+width:45px;
+line-height:27px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:10px;
+color:#FFFFFF;
+text-decoration:underline;
+text-align:left;
+padding-left:25px;
+}
+
+.ico_close a{
+display:block;
+background-image:url(../images/ico_close.jpg);
+height:27px;
+width:45px;
+line-height:27px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:10px;
+color:#FFFFFF;
+text-decoration:none;
+text-align:left;
+padding-left:25px;
+}
+
+.ico_close a:hover{
+display:block;
+background-image:url(../images/ico_close_1.jpg);
+height:27px;
+width:45px;
+line-height:27px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:10px;
+color:#FFFFFF;
+text-decoration:underline;
+text-align:left;
+padding-left:25px;
+}
+
+
+/*DIV*/
+#top{
+float:left;
+position:absolute;
+width:100%;
+margin-bottom:0px;
+margin-top:0px;
+margin-left:0px;
+margin-right:0px;
+}
+/*Ai Shipment List*/
+#list{
+float:left;
+position:absolute;
+width:968px;
+height:500px;
+margin-left:10px;
+margin-top:120px;
+}
+/*Ai Shipment List end*/
+
+/*MAWB Iformation*/
+#mawb_div1{
+	float:left;
+	position:absolute;
+	width:700px;
+	height:500px;
+	margin-left:10px;
+	margin-top:120px;
+
+}
+#mawb_div2{
+	float:left;
+	position:absolute;
+	width:280px;
+	height:500px;
+	margin-left:717px;
+	margin-top:120px;
+
+
+
+}
+/*MAWB Iformation END*/
+
+/*HAWB Information*/
+#hawb_div1{
+float:left;
+position:absolute;
+width:700px;
+height:250px;
+margin-left:10px;
+margin-top:120px;
+
+}
+#hawb_div2{
+float:left;
+position:absolute;
+width:260px;
+height:200px;
+margin-left:717px;
+margin-top:120px;
+}
+#hawb_div3{
+float:left;
+position:absolute;
+width:700px;
+height:100px;
+margin-left:10px;
+margin-top:327px;
+border:1px solid #333333;
+}
+#hawb_div4{
+float:left;
+position:absolute;
+width:967px;
+height:200px;
+margin-left:10px;
+margin-top:370px;
+}
+/*HAWB_END*/
+
+/*Invoice*/
+#invoice_div1{
+	float:left;
+	position:absolute;
+	width:650px;
+	height:500px;
+	margin-left:10px;
+	margin-top:119px;
+	
+}
+#invoice_div2{
+	float:left;
+	position:absolute;
+	width:280px;
+	height:500px;
+	margin-top:119px;
+	margin-left:665px;
+
+}
+/*Invoice end*/
+
+/*table*/
+.table_nav1{
+background-image:url(../images/bg_line.jpg);
+height:25px;
+border-left:1px solid #8db2e3;
+border-right:1px solid #8db2e3;
+border-top:1px solid #8db2e3;}
+
+.table_nav2{
+background-image:url(../images/bg_line_3.jpg);
+height:26px;
+border:1px solid #8db2e3;}
+
+.table_center{ 
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+font-weight:bold}
+
+.table{
+height:25px;
+text-align:center;
+line-height:25px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+}
+
+.table_24{
+height:23px;
+text-align:center;
+line-height:23px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+}
+.table_25px{ 
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+height:25px;
+line-height:25px}
+
+.table_25left{ 
+text-align:left;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+height:25px;
+line-height:25px}
+
+.table_line_90px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#CCCCCC;
+border-bottom:1px solid #666666;
+height:13px;
+width:85px}
+/*table end*/
+.table_line_165px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#CCCCCC;
+border-bottom:1px solid #666666;
+height:13px;
+width:175px}
+/*table end*/
+
+
+.text{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:80px;}
+
+.text_60px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:60px;}
+
+.text_70px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:70px;
+text-align:center;}
+
+
+.text_160px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:160px;}
+
+.select{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:85px;
+}
+.select_70{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:70px;
+}
+.select_80{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:75px;
+}
+
+.select_50{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:50px;
+}
+
+
+.select_160px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:160px;}
+
+.select_140px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#333333;
+width:160px;}
+
+.Submit{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+cursor:hand;
+font-weight:bold;
+color:#333333;
+width:60px;
+}
+
+.Submit_70px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+cursor:hand;
+font-weight:bold;
+color:#333333;
+width:73px;
+}
+.Submit_1{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+cursor:hand;
+font-weight:bold;
+color:#333333;
+width:50px;
+}
+.Submit_2{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+cursor:hand;
+font-weight:bold;
+color:#333333;
+width:90px;
+}
+
+.Submit_80px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+cursor:hand;
+font-weight:bold;
+color:#333333;
+width:80px;
+}
+
+/*NAV_MENU_1*/
+.nav_menu_1 a{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+color:#1542af;
+width:59px;
+height:19px;
+line-height:19px;
+text-align:center;
+margin-top:3px;
+
+}
+.nav_menu_1 a:hover{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+color:#1542af;
+width:59px;
+height:19px;
+line-height:19px;
+background-image:url(../images/btn_1.jpg);
+text-decoration:none;
+text-align:center;
+margin-top:3px;
+
+}
+
+/*NAV_MENU_2*/
+.nav_menu_2 a{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+color:#1542af;
+width:89px;
+height:19px;
+line-height:19px;
+text-align:center;
+margin-top:3px;
+
+}
+.nav_menu_2 a:hover{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+color:#1542af;
+width:89px;
+height:19px;
+line-height:19px;
+background-image:url(../images/btn_2.jpg);
+text-decoration:none;
+text-align:center;
+margin-top:3px;
+
+}
+
+/*NAV_MENU_3*/
+.nav_menu_3 a{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+color:#1542af;
+width:49px;
+height:19px;
+line-height:19px;
+text-align:center;
+margin-top:3px;
+
+}
+.nav_menu_3 a:hover{
+display:block;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+font-weight:bold;
+color:#1542af;
+width:49px;
+height:19px;
+line-height:19px;
+background-image:url(../images/btn_3.jpg);
+text-decoration:none;
+text-align:center;
+margin-top:3px;
+}
+
+/*LOCATION*/
+#location_div01{
+float:left;
+position:absolute;
+width:600px;
+height:100px;
+margin-left:10px;
+margin-top:0px;
+}
+
+#location_div02{
+float:left;
+position:absolute;
+width:600px;
+height:250px;
+margin-left:10px;
+margin-top:0px;
+}
+/*LOCATION END*/
+/*DIV END*/

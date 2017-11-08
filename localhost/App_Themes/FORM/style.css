@@ -1,0 +1,51 @@
+﻿/* ---   IE6、IE7、IE8、Firefox兼容   ---
+
+#tip {
+    background:blue; /*Firefox 背景变蓝色* /
+    background:red \9; /*IE8 背景变红色* /
+    *background:black; /*IE7 背景变黑色* /
+    _background:orange; /*IE6 背景变橘色* /
+} 
+
+-----------------------------
+字体大小: 12px
+主体颜色: #004499
+选中颜色、滑过颜色: #C23103
+线条颜色: #AACCEE
+表格表头背景色: #F0F5FB
+
+*/
+
+html { font-size:12px; color:#004499; margin:0; padding:0; }
+form { padding:3px; }
+input { border:solid 1px #AACCEE; }
+button { border:solid 1px #AACCEE; background-color:#F0F5FB; padding:4px 8px 0 8px; cursor:pointer; letter-spacing:2px; margin:0 3px 0 }
+
+.hide { display:none; }
+.show { display:block; }
+.left { text-align:left; }
+.right { text-align:right; }
+.center { text-align:center; }
+.cursor { cursor:pointer; }
+
+.padding13 { padding:13px; }
+
+.clear { float:none; clear:both; }
+.float-left { float:left; }
+.float-right { float:right; }
+
+.splitor-left { margin-left: 8px; }
+.splitor-right { margin-right: 8px; }
+.readonly { background-color:#efefef; }
+
+.pDiv { width:auto; height:auto; padding:3px; border:solid 1px #AACCEE; }
+.pDivTopSplitor { width:auto; height:auto; margin:0 0 8px 0; }
+.pDivSplitor { width:auto; height:auto; margin:8px 0 8px 0; }
+
+
+.width500 { width:1000px; }
+.width898p { width:98%; }
+
+.mypanel table { border-left:solid 1px #AACCEE; border-top:solid 1px #AACCEE; width:100%; height:auto; }
+.mypanel th { border-right:solid 1px #AACCEE; border-bottom:solid 1px #AACCEE; height:22px; padding:3px; background-color:#F0F5FB; font-weight:normal; }
+.mypanel td { border-right:solid 1px #AACCEE; border-bottom:solid 1px #AACCEE; height:22px; padding:3px; }

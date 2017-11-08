@@ -1,0 +1,203 @@
+﻿/* ---   IE6、IE7、IE8、Firefox兼容   ---
+
+#tip {
+    background:blue; /*Firefox 背景变蓝色* /
+    background:red \9; /*IE8 背景变红色* /
+    *background:black; /*IE7 背景变黑色* /
+    _background:orange; /*IE6 背景变橘色* /
+} 
+
+-----------------------------
+登录页面
+01 字体颜色: #5C5C5C
+02 线条颜色: #909598
+
+*/
+*, html { font-size:12px; color:#004499; margin:0; padding:0; }
+ul { list-style-type:none; padding:0; margin:0; }
+.clear { float:none; clear:both; }
+.float-l { float:left; }
+.float-r { float:right; }
+.hide { display:none; }
+.show { display:block; }
+.hand { cursor:pointer; }
+a:hover { color:#C23103; }
+
+
+.login-frame-panel  
+{
+    margin:138px 0 0 33%; margin:138px 0 0 0 \9; *margin:138px 0 0 0; _margin:138px 0 0 0;
+}
+
+.login-table-frame  
+{
+    width:359px; width:359px \9; *width:359px; _width:359px;
+}
+.login-header 
+{
+    background:url(images/UL001.png); background-repeat:no-repeat;
+    width:359px; width:359px \9; *width:359px; _width:359px;
+    height:115px; height:115px \9; *height:115px; _height:115px;  
+}
+.login-content 
+{
+    background:url(images/UL002.png); background-repeat:no-repeat;
+    width:359px; width:359px \9; *width:359px; _width:359px;
+    height:108px; height:108px \9; *height:108px; _height:108px;
+}
+.login-content-td-text  
+{
+    font-size:14px;
+    width:130px; width:130px \9; *width:130px; _width:130px;
+    padding:0 0 0 0; padding:3px 0 0 0 \9; *padding:3px 0 0 0; _padding:3px 0 0 0;
+}
+.login-content-td-textbox
+{
+    border:solid 1px #909598;
+    width:128px; width:128px \9; *width:128px; _width:128px;
+    height:17px; height:17px \9; *height:17px; _height:17px;
+    margin-left:5px; margin-left:5px \9; *margin-left:5px; _margin-left:5px;
+    padding:1px 1px 0 1px; padding:1px 1px 0 1px \9; *padding:1px 1px 0 1px; _padding:1px 1px 0 1px;
+}
+.login-button-signin 
+{
+    background:url(images/UL003.png); background-repeat:no-repeat; border:0; cursor:pointer;
+    width:63px; width:63px \9; *width:63px; _width:63px;
+    height:18px; height:18px \9; *height:18px; _height:18px;
+}
+.login-button-reset 
+{
+    background:url(images/UL004.png); background-repeat:no-repeat; border:0;  cursor:pointer;
+    width:63px; width:63px \9; *width:63px; _width:63px;
+    height:18px; height:18px \9; *height:18px; _height:18px;
+    margin:0 0 0 5px; margin:0 0 0 5px \9; *margin:0 0 0 5px; _margin:0 0 0 5px;
+}
+
+
+
+
+.menuframe-top-logo  
+{
+    float:left;
+    background:url(images/MF000.png); background-repeat:no-repeat;
+    width:417px; width:417px \9; *width:417px; _width:417px;
+    height:74px; height:74px \9; *height:74px; _height:74px;
+}
+.menuframe-top-menu 
+{
+    float:right;
+    margin-top:48px; margin-top:48px \9; *margin-top:48px; _margin-top:48px;
+}
+
+.menuframe-top-menu li { float:left; }
+.menuframe-top-menu-li-l 
+{
+    background:url(images/MF001.png); background-repeat:no-repeat;
+    width:13px; width:13px \9; *width:13px; _width:13px;
+    height:26px; height:26px \9; *height:26px; _height:26px;
+    margin-left:1px;
+}
+.menuframe-top-menu-li-r 
+{
+    background:url(images/MF003.png); background-repeat:no-repeat;
+    width:13px; width:13px \9; *width:13px; _width:13px;
+    height:26px; height:26px \9; *height:26px; _height:26px;
+}
+.menuframe-top-menu-li-b 
+{
+    background:url(images/MF002.png); width:auto;
+    height:26px; height:26px \9; *height:26px; _height:26px;
+}
+.menuframe-top-menu-li-t 
+{
+    letter-spacing:2px; cursor:pointer;
+    margin-top:5px; margin-top:8px \9; *margin-top:8px; _margin-top:8px;    
+}
+.menuframe-top-menu-li-t:hover { color:#C23103; }
+
+
+.menuframe-horizontal 
+{
+    background:url(images/MF004.png);
+    width:100%; height:32px; height:32px \9; *height:32px; _height:32px;
+}
+.menuframe-horizontal li { float:left; }
+.menuframe-horizontal-li-01-image
+{
+    background:url(images/MF005.png); background-repeat:no-repeat;
+    width:24px; width:24px \9; *width:24px; _width:24px;
+    height:32px; height:32px \9; *height:32px; _height:32px;
+}
+.menuframe-horizontal-li-02-image
+{
+    background:url(images/MF006.png); background-repeat:no-repeat;
+    width:14px; width:14px \9; *width:14px; _width:14px;
+    height:32px; height:32px \9; *height:32px; _height:32px;
+    margin:0 0 0 100px; margin:0 0 0 100px \9; *margin:0 0 0 100px; _margin:0 0 0 100px;
+}
+.menuframe-horizontal-li-03-image
+{
+    background:url(images/MF007.png); background-repeat:no-repeat;
+    width:21px; width:21px \9; *width:21px; _width:21px;
+    height:32px; height:32px \9; *height:32px; _height:32px;
+}
+.menuframe-horizontal-li-01-t
+{
+    letter-spacing:2px;
+    padding:8px 8px 0 5px; padding:11px 8px 0 5px \9; *padding:11px 8px 0 5px; _padding:11px 8px 0 5px;
+}
+
+
+
+.menuframe-content-l
+{
+    width:183px; width:183px \9; *width:183px; _width:183px;
+}
+.menuframe-content-l ul { margin:1px 0 0 0; margin:1px 0 0 0 \9; *margin:1px 0 0 0; _margin:1px 0 0 0; }
+.menuframe-content-r
+{
+    margin-top:1px; 
+    margin-left:1px;
+    width:auto;
+}
+.menuframe-content-l li { float:left; }
+.menuframe-content-l-01-l 
+{
+    background:url(images/MF008.png); background-repeat:no-repeat;
+    width:36px; width:36px \9; *width:36px; _width:36px;
+    height:27px; height:27px \9; *height:27px; _height:27px;    
+}
+.menuframe-content-l-01-r
+{
+    background:url(images/MF010.png); background-repeat:no-repeat; cursor:pointer;
+    width:32px; width:32px \9; *width:32px; _width:32px;
+    height:27px; height:27px \9; *height:27px; _height:27px;    
+}
+.menuframe-content-l-01-r1
+{
+    background:url(images/MF011.png); background-repeat:no-repeat; cursor:pointer;
+    width:32px; width:32px \9; *width:32px; _width:32px;
+    height:27px; height:27px \9; *height:27px; _height:27px;    
+}
+.menuframe-content-l-01-b
+{
+    background:url(images/MF009.png);
+    width:115px; width:115px \9; *width:115px; _width:115px;
+    height:27px; height:27px \9; *height:27px; _height:27px;
+}
+.menuframe-content-l-01-t 
+{
+    letter-spacing:2px;
+    margin:5px 8px 0 5px; margin:8px 8px 0 5px \9; *margin:8px 8px 0 5px; _margin:8px 8px 0 5px;
+}
+.menuframe-content-l-01-frameborder 
+{
+     border-left:solid 1px #AACCEE;
+     border-right:solid 1px #AACCEE;
+     border-bottom:solid 1px #AACCEE;     
+     padding:3px; line-height:22px;
+}
+
+
+
+#menuframe-iframe { width:100%; height:500px; }

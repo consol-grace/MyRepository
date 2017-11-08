@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>        
+        <link href="jquery.ui.custom/css/ui-lightness/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css" />
+        <script src="jQuery/js/jquery-1.4.1.js"></script>
+        <link href="themes/ylQuery.css" rel="stylesheet" type="text/css" />
+        <script src="ylQuery.js" type="text/javascript"></script>
+        <script src="ylQuery.Examples.js" type="text/javascript"></script>
+    </head>
+    <body>
+        
+        <button type="button" id="btnBrowserVersionView">浏览器版本号</button>
+        <button type="button" id="btnContextPathView">网站环境路径</button>
+        <button type="button" id="btnQueryString">获取地址栏参考</button>
+        <button type="button" id="btnDialog">弹出对话框</button>
+        <button type="button" id="btnUploadify">上传文件(中)</button>
+        <button type="button" id="btnUploadifyENG">上传文件(英)</button>
+        <br /><br />
+        
+        
+        <form id="table-dome-data"><table border="1" width="500">
+            <tr>
+                <th>姓名</th>
+                <td>
+                    <input type="text" name="NameCHS" />
+                </td>
+                <th>邮箱</th>
+                <td>
+                    <input type="text" name="Email" />
+                </td>
+                <th>电话</th>
+                <td>
+                    <input type="text" name="Tel" />
+                </td>
+            </tr>
+            <tr>
+                <th>密码</th>
+                <td>
+                    <input type="password" name="Password" />
+                </td>
+                <th>选择框</th>
+                <td colspan="3">
+                    <input type="checkbox" name="chkItem" value="M101" /> M101
+                    <input type="checkbox" name="chkItem" value="M102" /> M102
+                    <input type="checkbox" name="chkItem" value="M103" /> M103
+                </td>
+            </tr>
+        </table></form>
+        <br />
+        
+        <form id="ff-form-data">
+            <table id="table1" border="1" width="500">
+                <tr>
+                    <th>姓名</th>
+                    <td>
+                        <input type="text" name="NameCHS" />
+                    </td>
+                    <th>邮箱</th>
+                    <td>
+                        <input type="text" name="Email" />
+                    </td>
+                    <th>电话</th>
+                    <td>
+                        <input type="text" name="Tel" />
+                    </td>
+                    <th>密码</th>
+                    <td>
+                        <input type="password" name="Password1" onchange="Password.value=this.value" /><input type="hidden" name="Password" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+        <input type="button" id="btnAddNew_TableDome" name="btnAddNew_TableDome" value="Table Addnew Dome Data" />
+        <input type="button" id="btnAddNew_TableData" name="btnAddNew_TableData" value="Table Addnew Data" /><br />
+        <table id="table-dome-list" border="1" width="500">
+            <tr>
+                <th>姓名</th>
+                <th>邮箱</th>
+                <th>电话</th>
+            </tr>
+        </table>
+        
+        <br /><br /><br />
+        
+        
+        
+        
+    </body>
+</html>

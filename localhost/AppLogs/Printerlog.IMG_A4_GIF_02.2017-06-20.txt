@@ -1,0 +1,12 @@
+【2017-06-20 05:10:39 154】  加载报表 
+
+
+Error in File C:\Windows\TEMP\ProfitAndLoss {E6C0A0A1-0B6C-4097-BE53-FB1A7B51035A}.rpt:
+The rowset column could not be found.
+
+【2017-06-20 05:10:39 058】  准备参数 
+【2017-06-20 05:10:39 068】  开始打印,打印机:IMG_A4_GIF_02 ; 用户:GRACE，CON/HKG ; 报表类型：ProfitAndLoss.rpt ; SeedID :2875756
+【2017-06-20 05:10:44 487】  打印完成,开始执行预览 
+------------------------------------------------------
+
+

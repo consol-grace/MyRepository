@@ -1,0 +1,112 @@
+/*by xup*/
+/*body a
+{
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+body input
+{
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}*/
+.menu_btn a
+{
+    cursor: pointer;
+    font-size: 9px !important;
+    font-weight: bold;
+    color: #fff !important;
+    font-family: Verdana;
+    display: block;
+    text-decoration: none !important;
+    width: 69px;
+    margin: auto;
+    line-height: 21px;
+    background-image: url(../../images/menu/menu_01_01.png);
+    height: 22px;
+}
+
+.menu_btn a:hover
+{
+    cursor: pointer;
+    font-size: 9px !important;
+    font-weight: bold;
+    color: #fff !important;
+    font-family: Verdana;
+    display: block;
+    text-decoration: none !important;
+    width: 69px;
+    margin: auto;
+    line-height: 21px;
+    background-image: url(../../images/menu/menu_01_02.png);
+    height: 22px;
+}
+
+/*  MENU BTN_y */
+
+
+.menu_btn_02 a
+{
+    cursor: pointer;
+    font-size: 9px !important;
+    font-weight: bold;
+    color: #fff !important;
+    font-family: Verdana;
+    display: block;
+    text-decoration: none !important;
+    text-align: center; /*padding-left: 14px;*/
+    width: 110px;
+    margin: auto;
+    line-height: 21px;
+    background-image: url(../../images/menu/menu_02_01.png);
+    height: 22px;
+}
+
+.menu_btn_02 a:hover
+{
+    cursor: pointer;
+    font-size: 9px !important;
+    font-weight: bold;
+    color: #fff !important;
+    font-family: Verdana;
+    display: block;
+    text-decoration: none !important;
+    text-align: center; /*padding-left: 14px;*/
+    width: 110px;
+    margin: auto;
+    line-height: 21px;
+    background-image: url(../../images/menu/menu_02_02.png);
+    height: 22px;
+}
+
+
+.menu_down
+{
+    background-image: url(../../images/menu/down_01.png);
+    width: 21px;
+    height: 22px;
+    cursor: hand;
+}
+
+.menu_bg_01
+{
+    background-image: url(../../images/menu/menu_bg_01.png);
+    width: 137px;
+}
+
+.menu_bg_02
+{
+    background-image: url(../../images/menu/menu_bg_02.png);
+    height: 10px;
+    width: 137px;
+}
+
+/*#div
+{
+    display: none;
+    z-index: 9999;
+    top: 23px;
+    right: -6px;
+    position: absolute;
+    display: none;
+    padding-top: 5px;
+}*/

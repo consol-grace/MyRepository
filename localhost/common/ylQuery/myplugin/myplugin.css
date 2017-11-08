@@ -1,0 +1,65 @@
+﻿@import "jquery-ui-1.8.11/jquery-ui-1.8.11.custom.css";
+@import "jquery.ui/jquery.ui.all.css";
+@import "treeview/jquery.treeview.css";
+@import "uploadify/uploadify.css";
+
+/*=== myplugin css  ===*/
+.dgForm_pMask{
+    background:url(images/loading.gif) no-repeat center center; background-color:#fff; 
+    filter:alpha(opacity=81); -moz-opacity:0.81; opacity:0.81;
+    position:absolute; display:block; border:solid 1px #B5B2B5;
+}
+
+
+.loadpanel-handler
+{
+	 padding:1px;
+	 white-space:nowrap;	 	 
+	 background:#DBDBDB;
+	 text-align:right;
+}
+.loadpanel-content
+{
+	margin:0px;
+	padding:0px;
+}
+A.a010
+{
+	color:#000;	
+}
+A.a010:hover
+{
+	color:Red;
+}
+
+
+.TABS001 { list-style:none; padding:0; margin:0; }
+.TABS001001 { float:left; width:118px; height:12px; margin-right:1px; padding:8px; cursor:pointer;
+    border-left:solid 1px #AACCF1; border-top:solid 1px #AACCF1; border-right:solid 1px #AACCF1; 
+}
+.TABS001002 { float:left; width:118px; height:12px; margin-right:1px; padding:8px; cursor:pointer;
+    border-left:solid 1px #AACCF1; border-top:solid 1px #AACCF1; border-right:solid 1px #AACCF1; 
+    background-color:#ECF6FE;
+}
+.TABS001003 { border:solid 1px #AACCF1; margin-top:-8px; padding:8px; }
+.TABS001004 { float:none; clear:both; }
+.div-tabs-list { padding:0; margin:0; }
+
+/* jQuery Slide CSS --- Reference link jquery.slide.js file
+----------------------------------------------------------------------------------------
+#ifocus .JQ-slide-content{ position:absolute}
+#ifocus .JQ-slide-content li{zoom:1; overflow:hidden; vertical-align:text-top}
+#ifocus .JQ-slide-content li img {display:block}
+#ifocus .JQ-slide-nav {display: block; float: right; overflow:hidden;}
+#ifocus .JQ-slide-nav li {display: inline; float: left; }
+#ifocus .JQ-slide-nav li.on {display: inline; float: left; background:url(ifocus_btn_bg.png); }
+#ifocus .JQ-slide-nav li img {display:block}
+#ifocus #ifocus_btn { margin-left:8px; }
+*/
+
+/* === Utility Dialog === */
+.utility-dialog-masker { background-color:#efefef; filter:alpha(opacity=81); -moz-opacity:0.81; opacity:0.81; }
+.utility-dialog-titlebar-bg { float:none; clear:both; background:url(images/kd_dialog/kd_dialog_001.png); height:54px; width:100%; }
+.utility-dialog-titlebar-lt { float:left; background:url(images/kd_dialog/kd_dialog_000.png); height:54px; width:22px; background-repeat:no-repeat; }
+.utility-dialog-titlebar-ct { float:left; }
+.utility-dialog-titlebar-rt { float:right; cursor:pointer; background:url(images/kd_dialog/kd_dialog_003.png); height:54px; width:67px; background-repeat:no-repeat; }

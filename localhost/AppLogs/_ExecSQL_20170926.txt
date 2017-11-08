@@ -1,0 +1,35 @@
+【2017-09-26 15:41:22】The given path's format is not supported.
+              at System.Security.Util.StringExpressionSet.CanonicalizePath(String path, Boolean needFullPath)
+              at System.Security.Util.StringExpressionSet.CreateListFromExpressions(String[] str, Boolean needFullPath)
+              at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, AccessControlActions control, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+              at System.Security.Permissions.FileIOPermission..ctor(FileIOPermissionAccess access, String[] pathList, Boolean checkForDuplicates, Boolean needFullPath)
+              at System.IO.Directory.CreateDirectory(String path, DirectorySecurity directorySecurity)
+              at System.IO.Directory.CreateDirectory(String path)
+              at System.Net.EDI.EDIFile.ExecSQL() in d:\USGROUP\Web\operation-test.consol-hk.com\localhost\App_Code\EDI.cs:line 939
+
+【2017-09-26 15:43:11】The given path's format is not supported.
+              at System.Security.Util.StringExpressionSet.CanonicalizePath(String path, Boolean needFullPath)
+              at System.Security.Util.StringExpressionSet.CreateListFromExpressions(String[] str, Boolean needFullPath)
+              at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, AccessControlActions control, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+              at System.Security.Permissions.FileIOPermission..ctor(FileIOPermissionAccess access, String[] pathList, Boolean checkForDuplicates, Boolean needFullPath)
+              at System.IO.Directory.CreateDirectory(String path, DirectorySecurity directorySecurity)
+              at System.IO.Directory.CreateDirectory(String path)
+              at System.Net.EDI.EDIFile.ExecSQL() in d:\USGROUP\Web\operation-test.consol-hk.com\localhost\App_Code\EDI.cs:line 939
+
+【2017-09-26 15:49:09】The given path's format is not supported.
+              at System.Security.Util.StringExpressionSet.CanonicalizePath(String path, Boolean needFullPath)
+              at System.Security.Util.StringExpressionSet.CreateListFromExpressions(String[] str, Boolean needFullPath)
+              at System.Security.Permissions.FileIOPermission.AddPathList(FileIOPermissionAccess access, AccessControlActions control, String[] pathListOrig, Boolean checkForDuplicates, Boolean needFullPath, Boolean copyPathList)
+              at System.Security.Permissions.FileIOPermission..ctor(FileIOPermissionAccess access, String[] pathList, Boolean checkForDuplicates, Boolean needFullPath)
+              at System.IO.Directory.CreateDirectory(String path, DirectorySecurity directorySecurity)
+              at System.IO.Directory.CreateDirectory(String path)
+              at System.Net.EDI.EDIFile.ExecSQL() in d:\USGROUP\Web\operation-test.consol-hk.com\localhost\App_Code\EDI.cs:line 939
+
+【2017-09-26 15:54:38】The network path was not found.
+
+              at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+              at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, DirectorySecurity dirSecurity)
+              at System.IO.Directory.CreateDirectory(String path, DirectorySecurity directorySecurity)
+              at System.IO.Directory.CreateDirectory(String path)
+              at System.Net.EDI.EDIFile.ExecSQL() in d:\USGROUP\Web\operation-test.consol-hk.com\localhost\App_Code\EDI.cs:line 939
+

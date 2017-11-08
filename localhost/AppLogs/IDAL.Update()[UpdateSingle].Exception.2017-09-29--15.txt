@@ -1,0 +1,9 @@
+2017-09-29 15:27:58	Incorrect syntax near ')'.
+Incorrect syntax near ')'.
+
+2017-09-29 15:28:27	Incorrect syntax near ')'.
+Incorrect syntax near ')'.
+
+2017-09-29 15:30:24	Incorrect syntax near ')'.
+Incorrect syntax near ')'.
+

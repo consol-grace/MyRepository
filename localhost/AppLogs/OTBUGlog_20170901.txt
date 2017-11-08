@@ -1,0 +1,6 @@
+3:    lot : HKGOE1702001 SYS: OE
+
+2:    SYS: OE
+
+[9-1 16:12:11]     UICONTROLS  1:    LOT NO: HKGOE1702001    SYS: OE     company: txtCompany
+

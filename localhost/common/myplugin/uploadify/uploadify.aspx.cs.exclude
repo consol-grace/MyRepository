@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using DIYGENS.COM.CommonLL;
+
+public partial class Common_myplugin_uploadify_uploadify : DIYGENS.COM.BASECLASS.PageBase
+{
+    protected string OrderID, TableName;
+
+    protected override void Page_Load(object sender, EventArgs e)
+    {
+        OrderID = string.IsNullOrEmpty(Request.QueryString["OrderID"]) ? "DIY100000000000000000" : Request.QueryString["OrderID"];
+        TableName = string.IsNullOrEmpty(Request.QueryString["TableName"]) ? "WebUploadify" : Request.QueryString["TableName"];
+
+        InitData();
+    }
+
+    protected override void InitData()
+    {
+        this.InitVariable();
+        this.IDAL.ConnectionString = MyConfigHelper.UploadifyDB;
+        this.IDAL.CmdText = "WebUploadify_SP";
+        this.IFields.Add("Option", "list");
+        this.IFields.Add("OrderID", OrderID);
+        this.IFields.Add("TableName", TableName);
+        this.IDAL.DataSource.Add(this.IFields);
+
+        this.Repeater1.DataSource = this.IDAL.GetTable();
+        this.Repeater1.DataBind();
+    }
+
+    /// <summary>
+    /// QueryString传值方式加密
+    /// </summary>
+    /// <param name="encrypt"></param>
+    /// <returns></returns>
+    protected string UrlEncode(object encrypt)
+    {
+        return new Securitylib("20080526").Encrypt(encrypt);
+    }
+
+    /// <summary>
+    /// QueryString传值方式解密
+    /// </summary>
+    /// <param name="decrype"></param>
+    /// <returns></returns>
+    private string UrlDecode(object decrype)
+    {
+        return new Securitylib("20080526").Decrypt(decrype);
+    }
+}

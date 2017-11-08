@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<ShippingInstructions>
+ <InterchangeControlHeader>
+     <ControlNumber>3151</ControlNumber>
+     <SenderId>CONSOLINT</SenderId>
+     <ReceiverId>CARGOSMART</ReceiverId>
+     <DateTime>20171010123303</DateTime>
+     <ControlVersion>00401</ControlVersion>
+     <UsageIndicator>P</UsageIndicator>
+     <MessageSessionId>3151</MessageSessionId>
+ </InterchangeControlHeader>
+ <SIBillOfLading>
+     <GeneralInfo>
+         <TransactionInfo>
+             <BatchNumber>3151</BatchNumber>
+             <MessageSender>CONSOLINT</MessageSender>
+             <MessageRecipient>CARGOSMART</MessageRecipient>
+             <MessageID>SIXML</MessageID>
+             <DateCreated TimeZone="HKT">20171010123303</DateCreated>
+             <DataSource>0</DataSource>
+             <Version>1</Version>
+         </TransactionInfo>
+         <ActionType>NEW</ActionType>
+         <SIReferenceNumber>HKGOE1709002_0</SIReferenceNumber>
+         <SCAC>OOLU</SCAC>
+         <OwnedBy>CONSOLINT</OwnedBy>
+     </GeneralInfo>
+     <BLDetails>
+         <BookingInfo>
+             <BookingNumber>1</BookingNumber>
+             <BookingNumber>2</BookingNumber>
+             <BookingNumber>3</BookingNumber>
+             <BookingNumber>5</BookingNumber>
+             <BookingNumber>4</BookingNumber>
+         </BookingInfo>
+         <UserReferences>
+             <References>
+                 <ReferenceNumber>HKGOE1709002_0</ReferenceNumber>
+                 <ReferenceType>CR</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>1</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>3</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>5</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>4</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>1</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>3</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>5</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>4</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>HKGOE1709002_0</ReferenceNumber>
+                 <ReferenceType>SI</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>PE164436</ReferenceNumber>
+                 <ReferenceType>CT</ReferenceType>
+             </References>
+         </UserReferences>
+         <LegalParties>
+             <Party>
+                 <PartyType>CA</PartyType>
+                 <PartyName><![CDATA[ORIENT OVERSEAS CONTAINER LINE]]></PartyName>
+                 <PartyLocation>
+                     <Address>
+                         <AddressLines><![CDATA[LIMITED 2/F,HARBOUR CENTRE,25]]></AddressLines>
+                         <AddressLines><![CDATA[HARBOUR ROAD, WANCHAI,HONG KONG]]></AddressLines>
+                     </Address>
+                 </PartyLocation>
+             </Party>
+             <Party>
+                 <PartyType>SH</PartyType>
+                 <PartyName><![CDATA[CONSOLIDATOR INTERNATIONAL CO., LTD]]></PartyName>
+                 <PartyLocation>
+                     <Address>
+                         <AddressLines><![CDATA[ROOM 10, 10/F APEC PLAZA, NO 49]]></AddressLines>
+                         <AddressLines><![CDATA[HOI YUEN ROAD, KWUN TONG, KOWLOON,]]></AddressLines>
+                         <AddressLines><![CDATA[HONG KONG]]></AddressLines>
+                     </Address>
+                 </PartyLocation>
+             </Party>
+             <Party>
+                 <PartyType>CN</PartyType>
+                 <PartyName><![CDATA[AAAAAAAA]]></PartyName>
+             </Party>
+             <Party>
+                 <PartyType>N1</PartyType>
+                 <PartyName><![CDATA[AAAAAAAA]]></PartyName>
+             </Party>
+         </LegalParties>
+         <RouteInformation>
+             <VesselVoyageInformation>
+                 <VoyageNumberDirection>111</VoyageNumberDirection>
+                 <VesselInformation>
+                     <VesselName>OOCL ABILITY</VesselName>
+                 </VesselInformation>
+                 <External>
+                     <VoyageNumber>111</VoyageNumber>
+                 </External>
+                 <VesselVoyageText>OOCL ABILITY / 111</VesselVoyageText>
+                 <TrafficMode>
+                     <OutBound>CFS</OutBound>
+                     <InBound>CFS</InBound>
+                 </TrafficMode>
+                 <Haulage>Pier-to-Pier</Haulage>
+             </VesselVoyageInformation>
+             <Location>
+                 <FunctionCode>POR</FunctionCode>
+                 <LocationName>TEST123451123</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>AE123</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>POL</FunctionCode>
+                 <LocationName>TEST123451123</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>AE123</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>POD</FunctionCode>
+                 <LocationName>TEST123451123</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>AE123</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>FND</FunctionCode>
+                 <LocationName>TEST123451123</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>AE123</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+         </RouteInformation>
+         <EquipmentInformation>
+             <Containers>
+                 <AssociatedBookingNumber>1</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="A">CAAAA</ContainerNumber>
+                 <SealNumber Type="CA">1</SealNumber>
+                 <Package Type="20">1</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">1.000</Weight>
+                 <Volume Units="CBM">1.000</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>2</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="B">CBBBB</ContainerNumber>
+                 <SealNumber Type="CA">2</SealNumber>
+                 <Package Type="20">2</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">2.000</Weight>
+                 <Volume Units="CBM">2.000</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>3</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="C">CCCCC</ContainerNumber>
+                 <SealNumber Type="CA">3</SealNumber>
+                 <Package Type="20">9</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">9.000</Weight>
+                 <Volume Units="CBM">9.000</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>5</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="C">CCCCC</ContainerNumber>
+                 <SealNumber Type="CA">5</SealNumber>
+                 <Package Type="20">5</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">5.000</Weight>
+                 <Volume Units="CBM">5.000</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>4</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="D">CDDDDD</ContainerNumber>
+                 <SealNumber Type="CA">4</SealNumber>
+                 <Package Type="20">4</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">4.000</Weight>
+                 <Volume Units="CBM">4.000</Volume>
+             </Containers>
+         </EquipmentInformation>
+         <CargoInformation>
+             <CargoItems>
+                 <CargoNature>GC</CargoNature>
+                 <Package Type="20">1</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">1.000</Weight>
+                 <Volume Units="CBM">1.000</Volume>
+                 <CargoDescription>
+                     <DescriptionLine><![CDATA[CAAAAAAAA]]></DescriptionLine>
+                 </CargoDescription>
+                 <MarksAndNumbers>
+                     <MarksAndNumbersLine><![CDATA[CA]]></MarksAndNumbersLine>
+                 </MarksAndNumbers>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>1</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="A">CAAAA</ContainerNumber>
+                     <Package Type="20">1</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">1.000</Weight>
+                     <Volume Units="CBM">1.000</Volume>
+                 </CargoDetails>
+             </CargoItems>
+             <CargoItems>
+                 <CargoNature>GC</CargoNature>
+                 <Package Type="20">2</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">2.000</Weight>
+                 <Volume Units="CBM">2.000</Volume>
+                 <CargoDescription>
+                     <DescriptionLine><![CDATA[CBBBBBBBB]]></DescriptionLine>
+                 </CargoDescription>
+                 <MarksAndNumbers>
+                     <MarksAndNumbersLine><![CDATA[CB]]></MarksAndNumbersLine>
+                 </MarksAndNumbers>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="B">CBBBB</ContainerNumber>
+                     <Package Type="20">2</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">2.000</Weight>
+                     <Volume Units="CBM">2.000</Volume>
+                 </CargoDetails>
+             </CargoItems>
+             <CargoItems>
+                 <CargoNature>GC</CargoNature>
+                 <Package Type="20">9</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">9.000</Weight>
+                 <Volume Units="CBM">9.000</Volume>
+                 <CargoDescription>
+                     <DescriptionLine><![CDATA[CCCCCCCCC]]></DescriptionLine>
+                 </CargoDescription>
+                 <MarksAndNumbers>
+                     <MarksAndNumbersLine><![CDATA[CC]]></MarksAndNumbersLine>
+                 </MarksAndNumbers>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>3</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="C">CCCCC</ContainerNumber>
+                     <Package Type="20">9</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">9.000</Weight>
+                     <Volume Units="CBM">9.000</Volume>
+                 </CargoDetails>
+             </CargoItems>
+             <CargoItems>
+                 <CargoNature>GC</CargoNature>
+                 <Package Type="20">5</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">5.000</Weight>
+                 <Volume Units="CBM">5.000</Volume>
+                 <CargoDescription>
+                     <DescriptionLine><![CDATA[CCCCCCCCC]]></DescriptionLine>
+                 </CargoDescription>
+                 <MarksAndNumbers>
+                     <MarksAndNumbersLine><![CDATA[CC]]></MarksAndNumbersLine>
+                 </MarksAndNumbers>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>5</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="C">CCCCC</ContainerNumber>
+                     <Package Type="20">5</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">5.000</Weight>
+                     <Volume Units="CBM">5.000</Volume>
+                 </CargoDetails>
+             </CargoItems>
+             <CargoItems>
+                 <CargoNature>GC</CargoNature>
+                 <Package Type="20">4</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">4.000</Weight>
+                 <Volume Units="CBM">4.000</Volume>
+                 <CargoDescription>
+                     <DescriptionLine><![CDATA[CDDDDDDDDDDD]]></DescriptionLine>
+                 </CargoDescription>
+                 <MarksAndNumbers>
+                     <MarksAndNumbersLine><![CDATA[CD]]></MarksAndNumbersLine>
+                 </MarksAndNumbers>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>4</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="D">CDDDDD</ContainerNumber>
+                     <Package Type="20">4</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">4.000</Weight>
+                     <Volume Units="CBM">4.000</Volume>
+                 </CargoDetails>
+             </CargoItems>
+         </CargoInformation>
+     </BLDetails>
+     <SummaryDetails>
+         <BLInformation BLType="SWB" FreightType="FreightedCollect">
+             <BLNumber>1</BLNumber>
+             <OriginalBL>
+                 <ModeOfTransmission>EDI</ModeOfTransmission>
+             </OriginalBL>
+             <PaymentStatus>Collect</PaymentStatus>
+         </BLInformation>
+         <PaperWork>
+             <RequestedDocuments DocumentType="SWB" FreightType="FreightCollect">
+                 <NoOfCopies>3</NoOfCopies>
+                 <ModeOfTransmission>EDI</ModeOfTransmission>
+             </RequestedDocuments>
+         </PaperWork>
+     </SummaryDetails>
+ </SIBillOfLading>
+</ShippingInstructions>

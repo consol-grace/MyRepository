@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<ShippingInstructions>
+ <InterchangeControlHeader>
+     <ControlNumber>978</ControlNumber>
+     <SenderId>CONSOLINT</SenderId>
+     <ReceiverId>CARGOSMART</ReceiverId>
+     <DateTime>20170313125703</DateTime>
+     <ControlVersion>00401</ControlVersion>
+     <UsageIndicator>P</UsageIndicator>
+     <MessageSessionId>978</MessageSessionId>
+ </InterchangeControlHeader>
+ <SIBillOfLading>
+     <GeneralInfo>
+         <TransactionInfo>
+             <BatchNumber>978</BatchNumber>
+             <MessageSender>CONSOLINT</MessageSender>
+             <MessageRecipient>CARGOSMART</MessageRecipient>
+             <MessageID>SIXML</MessageID>
+             <DateCreated TimeZone="HKT">20170313125703</DateCreated>
+             <DataSource>0</DataSource>
+             <Version>1</Version>
+         </TransactionInfo>
+         <ActionType>UPD</ActionType>
+         <SIReferenceNumber>HKGOE1606001_0</SIReferenceNumber>
+         <SCAC>OOLU</SCAC>
+         <OwnedBy>CONSOLINT</OwnedBy>
+     </GeneralInfo>
+     <BLDetails>
+         <BookingInfo>
+             <BookingNumber>2552696101-9</BookingNumber>
+             <BookingNumber>2552696105-8</BookingNumber>
+             <BookingNumber>2552696195-0</BookingNumber>
+             <BookingNumber>S13134542120</BookingNumber>
+         </BookingInfo>
+         <UserReferences>
+             <References>
+                 <ReferenceNumber>HKGOE1606001_0</ReferenceNumber>
+                 <ReferenceType>CR</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2552696101-9</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2552696105-8</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2552696195-0</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>S13134542120</ReferenceNumber>
+                 <ReferenceType>BM</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2552696101-9</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2552696105-8</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>2552696195-0</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>S13134542120</ReferenceNumber>
+                 <ReferenceType>BN</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>HKGOE1606001_0</ReferenceNumber>
+                 <ReferenceType>SI</ReferenceType>
+             </References>
+             <References>
+                 <ReferenceNumber>PE164436</ReferenceNumber>
+                 <ReferenceType>CT</ReferenceType>
+             </References>
+         </UserReferences>
+         <LegalParties>
+             <Party>
+                 <PartyType>CA</PartyType>
+                 <PartyName><![CDATA[ORIENT OVERSEAS CONTAINER LINE]]></PartyName>
+                 <PartyLocation>
+                     <Address>
+                         <AddressLines><![CDATA[LIMITED 2/F,HARBOUR CENTRE,25]]></AddressLines>
+                         <AddressLines><![CDATA[HARBOUR ROAD, WANCHAI,HONG KONG]]></AddressLines>
+                     </Address>
+                 </PartyLocation>
+             </Party>
+             <Party>
+                 <PartyType>SH</PartyType>
+                 <PartyName><![CDATA[CONSOLIDATOR INTERNATIONAL CO., LTD]]></PartyName>
+                 <PartyLocation>
+                     <Address>
+                         <AddressLines><![CDATA[SUITE 2501A, 25/F., SKYLINE TOWER,]]></AddressLines>
+                         <AddressLines><![CDATA[39 WANG KWONG ROAD, KOWLOON BAY,]]></AddressLines>
+                         <AddressLines><![CDATA[HONG KONG TEL: 2764 3628 FAX: 2330]]></AddressLines>
+                     </Address>
+                 </PartyLocation>
+             </Party>
+             <Party>
+                 <PartyType>CN</PartyType>
+                 <PartyName><![CDATA[U.S. GROUP CONSOLIDATOR INC. (LAX)]]></PartyName>
+                 <PartyLocation>
+                     <Address>
+                         <AddressLines><![CDATA[618 GLASGOW AVENUE INGLEWOOD CA]]></AddressLines>
+                         <AddressLines><![CDATA[90301 USA TEL: 310 568 0008 FAX:]]></AddressLines>
+                         <AddressLines><![CDATA[310-568 0529]]></AddressLines>
+                     </Address>
+                 </PartyLocation>
+             </Party>
+             <Party>
+                 <PartyType>N1</PartyType>
+                 <PartyName><![CDATA[SAME AS CONSIGNEE]]></PartyName>
+             </Party>
+         </LegalParties>
+         <RouteInformation>
+             <VesselVoyageInformation>
+                 <VoyageNumberDirection>V.085E</VoyageNumberDirection>
+                 <VesselInformation>
+                     <VesselName>OOCL LONG BEACH </VesselName>
+                 </VesselInformation>
+                 <External>
+                     <VoyageNumber>V.085E</VoyageNumber>
+                 </External>
+                 <VesselVoyageText>OOCL LONG BEACH  / V.085E</VesselVoyageText>
+                 <TrafficMode>
+                     <OutBound>FCL</OutBound>
+                     <InBound>FCL</InBound>
+                 </TrafficMode>
+                 <Haulage>Pier-to-Pier</Haulage>
+             </VesselVoyageInformation>
+             <Location>
+                 <FunctionCode>POR</FunctionCode>
+                 <LocationName>HONG KONG</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>HKHKG</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>POL</FunctionCode>
+                 <LocationName>HONG KONG</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>HKHKG</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>POD</FunctionCode>
+                 <LocationName>LONG BEACH,CA</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>USLGB</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+             <Location>
+                 <FunctionCode>FND</FunctionCode>
+                 <LocationName>LONG BEACH,CA</LocationName>
+                 <LocationDetails>
+                     <LocationCode>
+                         <UNLocationCode>USLGB</UNLocationCode>
+                     </LocationCode>
+                 </LocationDetails>
+             </Location>
+         </RouteInformation>
+         <EquipmentInformation>
+             <Containers>
+                 <AssociatedBookingNumber>2552696101-9</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="2">OOLU641743</ContainerNumber>
+                 <SealNumber Type="CA">OOLCAG0581</SealNumber>
+                 <Package Type="20">95</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">1382.000</Weight>
+                 <Volume Units="CBM">207.970</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>2552696105-8</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="1">OOLU641743</ContainerNumber>
+                 <SealNumber Type="CA">OOLCAG0581</SealNumber>
+                 <Package Type="CAS">2</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">20.000</Weight>
+                 <Volume Units="CBM">3.212</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>2552696195-0</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="1">OOLU641743</ContainerNumber>
+                 <SealNumber Type="CA">OOLCAG0581</SealNumber>
+                 <Package Type="CAS">3</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">118.000</Weight>
+                 <Volume Units="CBM">3.510</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>2552696195-0</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="2">OOLU641743</ContainerNumber>
+                 <SealNumber Type="CA">OOLCAG0581</SealNumber>
+                 <Package Type="20">10</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">200.000</Weight>
+                 <Volume Units="CBM">25.000</Volume>
+             </Containers>
+             <Containers>
+                 <AssociatedBookingNumber>S13134542120</AssociatedBookingNumber>
+                 <ContainerType>20</ContainerType>
+                 <ContainerNumber CheckDigit="1">OOLU641743</ContainerNumber>
+                 <SealNumber Type="CA">SO0001110</SealNumber>
+                 <Package Type="20">8</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">120.000</Weight>
+                 <Volume Units="CBM">110.000</Volume>
+             </Containers>
+         </EquipmentInformation>
+         <CargoInformation>
+             <CargoItems>
+                 <CargoNature>GC</CargoNature>
+                 <Package Type="20">113</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">1702.000</Weight>
+                 <Volume Units="CBM">342.970</Volume>
+                 <CargoDescription>
+                     <DescriptionLine><![CDATA["THIS SHIPMENT CONTAINS NO SOLID WOOD]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[MATERIAL PACKING."]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[TELEPHONE PLUG/JACK]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(HS CODE 8536 69)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[COMPUTER CABLE WITH PLUG]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(HS CODE 8544 42)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[AS PER P/O: 110540 AND 110542]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[SCAC: USGR ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[HBL# AGPMSP08080]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[TELEPHONE PLUG/JACK]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(HS CODE 8536 69)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[COMPUTER CABLE WITH PLUG]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(HS CODE 8544 42)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[AS PER P/O: 110540 AND 110542]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[TELEPHONE PLUG/JACK]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(HS CODE 8536 69)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[COMPUTER CABLE WITH PLUG]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(HS CODE 8544 42)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[AS PER P/O: 110540 AND 110542]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[SCAC: USGR ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[HBL# AGPMSP08080]]></DescriptionLine>
+                     <DescriptionLine><![CDATA["THIS SHIPMENT CONTAINS NO SOLID WOOD]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[MATERIAL PACKING."]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[TELEPHONE PLUG/JACK]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(HS CODE 8536 69)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[COMPUTER CABLE WITH PLUG]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(HS CODE 8544 42)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[AS PER P/O: 110540 AND 110542]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[1 CASE S.T.C 7 PKGS]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[USED HOUSEHOLD GOODS AND]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[PERSONAL EFFECTS]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(LINEN, BASKET, MARBLE, ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ORNAMENTS, HANGERS)]]></DescriptionLine>
+                 </CargoDescription>
+                 <MarksAndNumbers>
+                     <MarksAndNumbersLine><![CDATA[OAKSHOTS]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[C/NO.1-33]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[OAKSHOTS ]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[C/NO.1-33]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[OAKSHOTS ]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[C/NO.1-33]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[COMPUTER CABLE ]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[WITH PLUG]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[(HS CODE 8544 42)]]></MarksAndNumbersLine>
+                 </MarksAndNumbers>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2552696101-9</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="2">OOLU641743</ContainerNumber>
+                     <Package Type="20">23</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">366.000</Weight>
+                     <Volume Units="CBM">25.970</Volume>
+                 </CargoDetails>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2552696195-0</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="2">OOLU641743</ContainerNumber>
+                     <Package Type="20">10</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">200.000</Weight>
+                     <Volume Units="CBM">25.000</Volume>
+                 </CargoDetails>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2552696101-9</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="2">OOLU641743</ContainerNumber>
+                     <Package Type="20">12</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">366.000</Weight>
+                     <Volume Units="CBM">52.000</Volume>
+                 </CargoDetails>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2552696101-9</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="2">OOLU641743</ContainerNumber>
+                     <Package Type="20">60</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">650.000</Weight>
+                     <Volume Units="CBM">130.000</Volume>
+                 </CargoDetails>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>S13134542120</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="1">OOLU641743</ContainerNumber>
+                     <Package Type="20">8</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">120.000</Weight>
+                     <Volume Units="CBM">110.000</Volume>
+                 </CargoDetails>
+             </CargoItems>
+             <CargoItems>
+                 <CargoNature>GC</CargoNature>
+                 <Package Type="CAS">5</Package>
+                 <Weight Qualifier="GROSS" Units="KGS">138.000</Weight>
+                 <Volume Units="CBM">6.722</Volume>
+                 <CargoDescription>
+                     <DescriptionLine><![CDATA["FUMIGATED WOODEN PALLETS""THIS CONSIGNMENT ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[CONTAIN HEATTREATER WOODEN PALLET WHICH ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ARECOMPLIED THE STANDARD OF ISPM 15."]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[1 CASE S.T.C 7 PKGS]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[USED HOUSEHOLD GOODS AND]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[PERSONAL EFFECTS]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(LINEN, BASKET, MARBLE, ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ORNAMENTS, HANGERS)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[SCAC# JQSH]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[HBL# JL16812346]]></DescriptionLine>
+                     <DescriptionLine><![CDATA["FUMIGATED WOODEN PALLETS""THIS CONSIGNMENT ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[CONTAIN HEATTREATER WOODEN PALLET WHICH ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ARECOMPLIED THE STANDARD OF ISPM 15."]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[1 CASE S.T.C 7 PKGS]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[USED HOUSEHOLD GOODS AND]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[PERSONAL EFFECTS]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[(LINEN, BASKET, MARBLE, ]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[ORNAMENTS, HANGERS)]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[SCAC# JQSH]]></DescriptionLine>
+                     <DescriptionLine><![CDATA[HBL# JL16812346]]></DescriptionLine>
+                 </CargoDescription>
+                 <MarksAndNumbers>
+                     <MarksAndNumbersLine><![CDATA[CROWN RELOCATIONS]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[DARREN SCOTT LONG]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[L/VAN# 1 OF 1]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[HOUSTON ]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[USA]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[CROWN RELOCATIONS]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[DARREN SCOTT LONG]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[L/VAN# 1 OF 1]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[HOUSTON ]]></MarksAndNumbersLine>
+                     <MarksAndNumbersLine><![CDATA[USA]]></MarksAndNumbersLine>
+                 </MarksAndNumbers>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2552696195-0</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="1">OOLU641743</ContainerNumber>
+                     <Package Type="CAS">3</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">118.000</Weight>
+                     <Volume Units="CBM">3.510</Volume>
+                 </CargoDetails>
+                 <CargoDetails>
+                     <AssociatedBookingNumber>2552696105-8</AssociatedBookingNumber>
+                     <ContainerNumber CheckDigit="1">OOLU641743</ContainerNumber>
+                     <Package Type="CAS">2</Package>
+                     <Weight Qualifier="GROSS" Units="KGS">20.000</Weight>
+                     <Volume Units="CBM">3.212</Volume>
+                 </CargoDetails>
+             </CargoItems>
+         </CargoInformation>
+     </BLDetails>
+     <SummaryDetails>
+         <BLInformation BLType="SWB" FreightType="FreightedCollect">
+             <BLNumber>2552696101-9</BLNumber>
+             <OriginalBL>
+                 <ModeOfTransmission>EDI</ModeOfTransmission>
+             </OriginalBL>
+             <PaymentStatus>Collect</PaymentStatus>
+         </BLInformation>
+         <PaperWork>
+             <RequestedDocuments DocumentType="SWB" FreightType="FreightCollect">
+                 <NoOfCopies>3</NoOfCopies>
+                 <ModeOfTransmission>EDI</ModeOfTransmission>
+             </RequestedDocuments>
+         </PaperWork>
+     </SummaryDetails>
+ </SIBillOfLading>
+</ShippingInstructions>

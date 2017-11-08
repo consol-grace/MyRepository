@@ -1,0 +1,132 @@
+﻿#show_Contentframe
+{
+    background-color: #efefef;
+    position: absolute;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 9999;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+}
+#show_contentframe_loading
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 98px;
+    height: 29px;
+    background-image: url(/common/uicontrols/img_report/loading.gif);
+}
+
+#Contentframe #div_up
+{
+    position: fixed;
+    height: 100%;
+    width: 480px;
+    background-image: url(/common/UIControls/img_report/btn_up.png);
+    background-position: 2px 32%;
+    background-repeat: no-repeat;
+    z-index: 99;
+    cursor: pointer;
+    filter: alpha(opacity=10);
+    -moz-opacity: 0.1;
+    -khtml-opacity: 0.1;
+    opacity: 0.1;
+}
+
+#Contentframe #div_next
+{
+    position: fixed;
+    height: 100%;
+    width: 480px;
+    background-image: url(/common/UIControls/img_report/btn_next.png);
+    background-position: right 32%;
+    background-repeat: no-repeat;
+    margin-left:495px;
+    z-index: 99;
+    cursor: pointer;
+    filter: alpha(opacity=10);
+    -moz-opacity: 0.1;
+    -khtml-opacity: 0.1;
+    opacity: 0.1;
+}
+
+#Contentframe div
+{
+    width: 100%;
+    height: 100%;
+}
+#report_tools
+{
+    width: 1000px;
+    margin: 0px auto;
+    border: solid 1px #a0a0a0;
+    height: 23px;
+    line-height: 23px;
+    margin-bottom: 1px;
+}
+#report_tools td
+{
+    vertical-align: text-top;
+    text-align: center;
+    padding-top: 1px;
+}
+#report_tools td img
+{
+    vertical-align: middle;
+    cursor: pointer;
+}
+#report_tools #drpDownLoadlist
+{
+    border: outset 1px #ddd;
+}
+#report_tools #txtPagecurrindex
+{
+    border: solid 1px #ddd;
+    width: 35px;
+    margin: 0px 2px;
+    text-align: center;
+}
+#report_tools img.span_line
+{
+    height: 12px;
+    width: 1px;
+    margin: 0px 5px;
+}
+.font_11px
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+.font_14px
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #878787;
+}
+
+
+#LinBtnPrint,#btnInvDraft
+{
+	border:0px;
+	background:Transparent;
+	background-image:url(/common/uicontrols/img_report/perview_print.gif);
+    width:65px; 
+    height:22px; 
+    background-position:center center;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:10px;        
+    text-transform:none;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	}
+
+#LinBtnPrint:hover
+{
+	/*background-image:url(/common/uicontrols/img_report/perview_print_focus.gif);*/
+	}

@@ -1,0 +1,290 @@
+body {
+font-family:Verdana, Arial, Helvetica, sans-serif !important;
+font-size:10px !important;
+color:#000000 !important;
+-webkit-text-size-adjust:none;
+}
+
+.Courier
+{
+	font-family:"Courier New", Courier, monospace;
+	font-size:15px;
+         
+         }
+
+.Courier_red
+{
+	font-family:"Courier New", Courier, monospace;
+	font-size:15px;
+	color:Red;
+         
+         }
+
+.ae_table{
+height:19px;
+}
+.ae_table_20px{
+height:20px;
+}
+.ae_table_21px{
+height:21px;
+}
+.ae_table_22px{
+height:22px;
+}
+.ae_table_23px{
+height:23px;
+}
+
+.line_bg
+{
+	background-image: url(../../images/table/OE_line_02.jpg)
+	}
+
+.font_8px{
+font-family:Arial, Helvetica, sans-serif;
+font-size:8px;
+color:#000000;
+}
+
+.font_9px{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:9px;
+color:#000000;
+}
+
+.font_10px{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:10px;
+color:#000000;
+}
+
+
+.font_11px_bold2{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#000000;
+font-weight:bold;
+}
+
+.font_11_gray_bold{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#111111;
+font-weight:bold;
+}
+
+.font_10_gray{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:8px;
+color:#b9b9b9;
+}
+
+
+
+.font_11_gray{
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#666666;
+}
+
+.font_12px_back{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#000000;
+font-weight:normal;
+}
+
+td {font-family: Arial, Helvetica, sans-serif !important;}
+th {font-family: Arial, Helvetica, sans-serif !important;}
+
+.text_43{
+font-family:"Courier New", Courier, monospace;
+font-size:15px;
+border:0px;
+height:14px;
+line-height:14px;
+background-color:transparent;
+}
+
+.text_44{
+font-family:"Courier New", Courier, monospace;
+font-size:14px;
+border:0px;
+height:14px;
+line-height:14px;
+background-color:transparent
+}
+
+.text_45{
+font-family:"Courier New", Courier, monospace;
+font-size:16px;
+border:0px;
+height:14px;
+line-height:14px;
+background-color:transparent;
+}
+
+.text_line{
+font-family:"Courier New", Courier, monospace;
+font-size:10px;
+border:1px solid #000000;
+font-size:15px;
+height:15px;
+
+}
+
+#padding{
+padding-left:2px; 
+padding-right:2px
+}
+
+#padding01{
+padding-left:2px; 
+padding-right:2px;
+padding-bottom:2px;
+padding-top:2px
+}
+
+#padding02{
+padding-bottom:1px;
+padding-top:1px
+}
+
+#padding03{
+padding-left:1px; 
+padding-right:1px;
+}
+
+#padding04{
+padding-left:1px; 
+padding-right:1px;
+padding-bottom:1px;
+padding-top:1px
+}
+
+#padding04_01{
+padding-left:1px; 
+padding-right:1px;
+padding-bottom:1px;
+padding-top:2px
+}
+
+
+#padding05{
+padding-left:1px; 
+padding-top:1px
+}
+
+#padding06{
+padding-top:1px
+}
+
+#padding06_01{
+padding-top:2px
+}
+
+#padding07{
+padding-left:1px; 
+padding-right:1px;
+padding-top:1px
+}
+
+#padding08{
+padding-left:1px
+}
+
+#padding09{
+padding-left:2px; 
+padding-right:2px;
+padding-top:2px
+}
+
+#padding10{
+padding-left:5px
+}
+
+.boder_line{
+border-top:1px solid #000000;
+border-left:1px solid #000000;
+}
+.boder_line_01{
+border-right:1px solid #000000;
+border-bottom:1px solid #000000
+}
+
+.boder_line_02{
+border-top:1px solid #000000
+}
+
+.boder_line_03{
+border-top:1px solid #000000;
+border-left:1px solid #000000
+}
+
+.boder_line_04{
+border-left:1px solid #000000
+}
+
+.boder_line_05{
+border-right:1px solid #000000
+}
+
+.boder_line_06{
+border-right:1px solid #000000;
+border-left:1px solid #000000;
+}
+
+.boder_line_07{
+border-bottom:1px solid #000000
+}
+
+.boder_line_08{
+border-left:1px solid #000000
+}
+
+.boder_line_09{
+border-right:1px solid #000000;
+border-top:1px solid #000000
+}
+
+.boder_line_10{
+border-top:1px solid #000000;
+border-left:1px solid #000000;
+border-right:1px solid #000000;
+}
+
+.boder_line_11{
+border-left:1px solid #000000;
+border-bottom:1px solid #000000
+}
+
+.boder_line_12{
+border-right:1px solid #000000;
+border-left:1px solid #000000;
+border-bottom:1px solid #000000;
+}
+
+.cursor{cursor:hand; align:right; padding-left:2px; padding-right:2px}
+
+.font_14px_1542af{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px; 
+color:#1542af;
+font-weight:bold;}
+
+.font_18px{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:18px; 
+color:#000000;
+font-weight:bold;}
+
+.font_13px{
+font-family:Verdana, Arial, Helvetica, Arial, Helvetica, sans-serif;
+font-size:13px; 
+color:#000000;
+font-weight:bold;}
+
+.x-form-text, textarea.x-form-field {
+padding: 1px 0px  !important;
+}

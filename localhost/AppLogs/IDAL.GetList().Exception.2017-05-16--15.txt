@@ -1,0 +1,14 @@
+2017-05-16 15:23:50	Procedure or function 'FW_OceanExport_MBL_SP' expects parameter '@o_PreVesselID', which was not supplied.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 15:23:58	Procedure or function 'FW_OceanExport_MBL_SP' expects parameter '@o_PreVesselID', which was not supplied.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 15:24:01	Procedure or function 'FW_OceanExport_MBL_SP' expects parameter '@o_PreVesselID', which was not supplied.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 15:24:03	Procedure or function 'FW_OceanExport_MBL_SP' expects parameter '@o_PreVesselID', which was not supplied.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 15:24:05	Procedure or function 'FW_OceanExport_MBL_SP' expects parameter '@o_PreVesselID', which was not supplied.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 15:24:28	Procedure or function 'FW_OceanExport_MBL_SP' expects parameter '@o_PreVesselID', which was not supplied.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 15:24:31	Procedure or function 'FW_OceanExport_MBL_SP' expects parameter '@o_PreVesselID', which was not supplied.，请检查 SQL 语句 或 存储过程是否正确!
+

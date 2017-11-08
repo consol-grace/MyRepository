@@ -1,0 +1,799 @@
+﻿/// <reference path="jquery-1.4.1.js" />
+/* 
+* 描述: 自撰、jQuery扩展脚本库
+* 作者: robert     MSN: robert@diygens.com     Email: robert@diygens.com     QQ: 1055210005
+*/
+document.writeln('<div style="position:absolute;z-index:100;width:auto;height:auto;display:none;" id="pContainer"></div>');
+document.writeln('<div style="position:absolute;z-index:99;width:auto;height:auto;display:none;" id="pMasker"></div>');
+
+// 獲取對象
+// 例:
+//     var _this = jQuery.IdGET("tableId");
+jQuery.IdGET = function(v) {
+    return document.getElementById(v);
+}
+
+// 打开新窗体
+// 例:
+//     01、jQuery.OpenWindow({modal:"open" ,w:900 ,h:600 ,WinName:"", url:"http://mail.163.com"});
+//     02、jQuery.OpenWindow({modal:"open" ,w:900 ,h:600 ,url:"http://mail.163.com"});
+//
+//     03、jQuery.OpenWindow({modal:"dialog" ,w:900 ,h:600 ,WinName:"", url:"http://mail.163.com"});
+//     04、jQuery.OpenWindow({modal:"dialog" ,w:900 ,h:600 ,url:"http://mail.163.com"});
+jQuery.OpenWindow = function(opts) {
+    var features = "";
+    if (opts.modal == "open") {
+        if (!opts.w) opts.w = 900;
+        if (!opts.w) opts.h = 600;
+        if (!opts.WinName) opts.WinName = "";
+        features += "width=" + opts.w + "px";
+        features += ", height=" + opts.h + "px";
+        features += ", top=" + (screen.availHeight - opts.h) / 2 + "px";
+        features += ", left=" + (screen.availWidth - opts.w) / 2 + "px";
+        features += ", scrollbars=yes";
+        features += ", resizable=yes";
+        window.open(opts.url, opts.WinName, features);
+    }
+    if (opts.modal == "dialog") {
+        if (!opts.w) opts.w = 900;
+        if (!opts.w) opts.h = 600;
+        if (!opts.WinName) opts.WinName = "";
+        features += "dialogWidth:" + opts.w + "px";
+        features += "; dialogHeight:" + opts.h + "px";
+        features += "; dialogTop:" + (screen.availHeight - opts.h) / 2 + "px";
+        features += "; dialogLeft:" + (screen.availWidth - opts.w) / 2 + "px";
+        features += "; status:no";
+        window.showModalDialog(opts.url, opts.WinName, features);
+    }
+}
+// 获取地址栏值( http://localhost/CCCRM/index.htm?id=1 )
+// 例: var id = $.QueryString("id");
+jQuery.QueryString = function(key) {
+    var value = ""; 									//获取当前文档的URL,为后面分析它做准备	
+    var sURL = window.document.URL;
+    if (sURL.indexOf("?") > 0)								//URL中是否包含查询字符串
+    {
+        var arrayParams = sURL.split("?");                  //分解URL,第二的元素为完整的查询字符串, 即arrayParams[1]的值为【first=1&second=2】
+        var arrayURLParams = arrayParams[1].split("&");     //分解查询字符串, arrayURLParams[0]的值为【first=1 】, arrayURLParams[2]的值为【second=2】		
+        for (var i = 0; i < arrayURLParams.length; i++)		//遍历分解后的键值对
+        {
+            var sParam = arrayURLParams[i].split("="); 	//分解一个键值对
+            if ((sParam[0] == key) && (sParam[1] != "")) {
+                value = sParam[1]; 						//找到匹配的的键,且值不为空
+                break;
+            }
+        }
+    }
+    return value;
+}
+// Document中对象的X定位
+// 例: var x = $.FindPosX("id");
+jQuery.FindPosX = function(obj) {
+    var curleft = 0;
+    if (obj.offsetParent)
+        while (1) {
+        curleft += obj.offsetLeft;
+        if (!obj.offsetParent)
+            break;
+        obj = obj.offsetParent;
+    }
+    else if (obj.x)
+        curleft += obj.x;
+    return curleft;
+}
+// Document中对象的Y定位
+// 例: var y = $.FindPosY("id");
+jQuery.FindPosY = function(obj) {
+    var curtop = 0;
+    if (obj.offsetParent)
+        while (1) {
+        curtop += obj.offsetTop;
+        if (!obj.offsetParent)
+            break;
+        obj = obj.offsetParent;
+    }
+    else if (obj.y)
+        curtop += obj.y;
+    return curtop;
+}
+// 随机数
+// 例: var iRnd = $.RandomGET();
+jQuery.RandomGET = function() {
+    var a = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "Z", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_");
+    var b = "";
+    for (i = 1; i <= 13; i++) {
+        b = b + a[Math.floor(Math.random() * 63)];
+    }
+    return b;
+}
+
+// 日历, 选择后可修改
+// 例: jQuery.MyCalender("txtDate", "yyyy-MM-dd HH:mm") 或 jQuery.MyCalender("txtDate", "yyyy-MM-dd")
+jQuery.MyCalender = function(ID, Format) {
+    if (Format == "")
+        WdatePicker({ el: ID, dateFmt: 'yyyy-MM-dd' })
+    else
+        WdatePicker({ el: ID, dateFmt: Format })
+}
+
+/* <remarks>作者: Robert Yu ( 2007-11-16 ) 版权所有<remarks>
+* <summary>
+* 加载页面
+* </summary>
+* <example>
+*		<a href='#1' onclick='jQuery.LoadPagePanel({obj:this ,w:500 ,h:400 ,y:18 ,url:"http://mail.163.com"});'>
+*			<img style="margin:2px 8px 0px 0px" src='<%=Publiclib.Common.ContextPath%>Common/images/view.gif'>
+*		</a> 
+* </example>
+* <param name="obj">HTML物件</param>
+* <param name="w">宽度</param>
+* <param name="h">高度</param>
+* <param name="y">Y轴偏移量</param>
+* <param name="url">加载页面</param> */
+jQuery.LoadPagePanel = function(opts) {
+    if (!opts.w) opts.w = 900;
+    if (!opts.h) opts.h = 600;
+    if (!opts.y) opts.y = 18;
+    if (!opts.ContainerPadding) opts.ContainerPadding = "0 5px 0 0";
+    if (!opts.ContainerBG) opts.ContainerBG = "#ffffff";
+    if (!opts.ContainerBorder) opts.ContainerBorder = "1px #07519A solid";
+
+    document.getElementById("pContainer").style.display = "block";
+    document.getElementById("pContainer").style.left = parseInt(jQuery.FindPosX(opts.obj));
+    document.getElementById("pContainer").style.top = parseInt(jQuery.FindPosY(opts.obj)) + opts.y;
+    document.getElementById("pContainer").style.padding = "0 5px 0 0";
+    document.getElementById("pContainer").style.background = opts.ContainerBG;
+    document.getElementById("pContainer").style.width = "auto";
+    document.getElementById("pContainer").style.height = "auto";
+    document.getElementById("pContainer").style.border = opts.ContainerBorder;
+
+    var str = "";
+    str += '<div class="dialog-handler"><a class="a010" href="javascript:void(0);" onclick=\'document.getElementById("pContainer").style.display="none";\'>关闭</a></div>';
+    str += '<iframe class="dialog-iframe" frameborder="0" src="' + opts.url + '" style="width:' + opts.w + 'px; height:' + opts.h + 'px; z-index:9999;margin:0;" />';
+    document.getElementById("pContainer").innerHTML = str;
+}
+jQuery.LoadPageClose = function(levelid) {
+    var obj = levelid == 0 ? document.getElementById("pContainer") : window.parent.document.getElementById("pContainer");
+    obj.style.display = "none";
+}
+/* <remarks>作者: Robert Yu ( 2007-11-16 ) 版权所有<remarks>
+* <summary>
+* 加载页面
+* </summary>
+* <example>
+*		<a href='#1' onclick='jQuery.LoadPanel({obj:this ,w:500 ,h:400 ,y:18 ,url:"http://mail.163.com"});'>
+*			<img style="margin:2px 8px 0px 0px" src='<%=Publiclib.Common.ContextPath%>Common/images/view.gif'>
+*		</a> 
+* </example>
+* <param name="obj">HTML物件</param>
+* <param name="w">宽度</param>
+* <param name="h">高度</param>
+* <param name="y">Y轴偏移量</param>
+* <param name="url">加载页面</param> */
+jQuery.LoadPanel = function(opts) {
+    if (!opts.w) opts.w = 900;
+    if (!opts.h) opts.h = 600;
+    if (!opts.y) opts.y = 18;
+    if (!opts.ContainerBG) opts.ContainerBG = "#ffffff";
+    if (!opts.ContainerBorder) opts.ContainerBorder = "1px #07519A solid";
+
+    document.getElementById("pContainer").style.display = "block";
+    document.getElementById("pContainer").style.left = parseInt(jQuery.FindPosX(opts.obj));
+    document.getElementById("pContainer").style.top = parseInt(jQuery.FindPosY(opts.obj)) + opts.y;
+    document.getElementById("pContainer").style.background = opts.ContainerBG;
+    document.getElementById("pContainer").style.width = "auto";
+    document.getElementById("pContainer").style.height = "auto";
+    document.getElementById("pContainer").style.border = opts.ContainerBorder;
+
+    var str = "";
+    str += '<div class="dialog-handler"><a class="a010" href="javascript:void(0);" onclick=\'jQuery.LoadPageClose(0)\'>关闭</a></div>';
+    str += '<iframe class="dialog-iframe" frameborder="0" src="' + opts.url + '" style="width:' + opts.w + 'px; height:' + opts.h + 'px; z-index:9999;margin:0;" />';
+    document.getElementById("pContainer").innerHTML = str;
+}
+/* <remarks>作者: Robert Yu ( 2007-11-16 ) 版权所有<remarks>
+* <summary>
+* 加载页面
+* </summary>
+* <example>
+// 定义样式表
+// --- BEGIN ---------------------------------------------------------------------------------------
+/ * 对话框样式 * /
+.dialog { border:1px #07519A solid; background:#221E1F; }
+.dialog .header{background:url(images/ui-bg_01.png); text-align:right; padding:5px; }
+.dialog .header .caption{float:left;font-size:14px;color:#efefef; }
+.dialog .header .close{
+float:right;
+padding-right:8px;
+width:30px;
+width:30px;
+cursor:pointer;
+color:#efefef;
+text-decoration:underline;
+}
+.dialog .header .close:hover { color:red }
+
+.dialog .body
+{
+float:none;
+clear:both;
+}
+
+.dialog iframe
+{
+        
+}
+
+.dialog .icon
+{
+        
+}
+// --- END -----------------------------------------------------------------------------------------
+    
+// 调用实例
+<a href='#1' onclick='jQuery.LoadPage({caption:"请输入标题" ,w:500 ,h:400 ,url:"http://frame.diygens.com"});'>
+<img style="margin:2px 8px 0px 0px" src='<%=Publiclib.Common.ContextPath%>Common/images/view.gif'>
+</a>
+* </example>
+* <param name="obj">HTML物件</param>
+* <param name="w">宽度</param>
+* <param name="h">高度</param>
+* <param name="y">Y轴偏移量</param>
+* <param name="url">加载页面</param> */
+jQuery.LoadPage = function(opts) {
+    if (!opts.w) opts.w = 900;
+    if (!opts.h) opts.h = 600;
+    if (!opts.url) opts.url = "http://frame.diygens.com";
+    if (!opts.caption) opts.caption = "请设置标题";
+
+    document.getElementById("pContainer").style.display = "block";
+    document.getElementById("pContainer").setAttribute("class", "dialog");
+    document.getElementById("pContainer").style.left = (screen.availWidth - opts.w) / 3 + "px";
+    document.getElementById("pContainer").style.top = (screen.availHeight - opts.h) / 8 + "px";
+    document.getElementById("pContainer").style.width = "auto";
+    document.getElementById("pContainer").style.height = "auto";
+
+    var str = "";
+    str += '<div class="header"><div class="caption">' + opts.caption + '</div><div class="close" onclick=\'jQuery.LoadPageClose(0); $("#pMasker").hide();\'>CLOSE</div><div class="clear"></div></div>';
+    str += '<iframe frameborder="0" src="' + opts.url + '" style="width:' + opts.w + 'px; height:' + opts.h + 'px; z-index:9999;margin:0;" />';
+    document.getElementById("pContainer").innerHTML = str;
+
+    $("#pContainer>div[class=header]").mouseover(function() { $(this).css("cursor", "move"); });
+    $("#pContainer").MoveDIV();
+    $("#pMasker").css({ left: 0, top: 0, width: document.documentElement.scrollWidth, height: document.documentElement.scrollHeight });
+    $("#pMasker").attr("class", "mask");
+    $("#pMasker").show();
+}
+
+// 上传文件
+// 例: <a href='javascript:void(0)' onclick='jQuery.Uploadify(this, {ContextPath:"<%= Urllib.ContextPath %>" ,TableID:"TableID" ,RelatedID:"RelatedID" ,Related2ID:"Related2ID" ,Related3ID:"Related3ID"})');
+jQuery.Uploadify = function(me, opts) {
+    var strUrl = opts.ContextPath + "Common/myplugin/uploadify/uploader.aspx?TableID=" + opts.TableID;
+    strUrl += "&RelatedID=" + opts.RelatedID;
+    strUrl += "&Related2ID=" + opts.Related2ID;
+    strUrl += "&Related3ID=" + opts.Related3ID;
+    jQuery.LoadPagePanel({ obj: me, w: 368, h: 273, y: 15, url: strUrl });
+}
+
+/*
+例：
+jQuery(document).ready(function() {
+jQuery.MyTabs({ ulClass: 'TABS001', liID: '#' });
+});
+--------------------------------------------------------------------
+<ul id="tabs001" class="TABS001">
+<li class="TABS001001" id="#0">库存清单</li>
+<li class="TABS001002" id="#1">采购入库</li>
+<li class="TABS001002" id="#2">在途使用维护</li>
+</ul><div class="TABS001004" />
+
+<div class="#0">
+
+</div>
+<div class="#1">
+
+</div>
+<div class="#2">
+
+</div>
+*/
+jQuery.MyTabs = function(opts) {
+    if (!opts.liStyle) opts.liStyle = "border:solid 1px #AACCF1; padding:8px 8px 18px 13px;";
+    if (opts.ifmH) {
+        if (opts.ifmH.indexOf("px") == -1) opts.ifmH = opts.ifmH + "px";
+    }
+    else opts.ifmH = "350px";
+
+    // Initialization Tabs
+    jQuery("ul[class=" + opts.ulClass + "]>li").each(function(i) {
+        if (i != 0) {
+            jQuery("div[class=" + opts.liID + i + "]").attr("style", opts.liStyle).hide();
+            jQuery("div[class=" + opts.liID + i + "]>iframe").attr({ "width": "100%", "height": opts.ifmH });
+        }
+        else {
+            jQuery("div[class=" + opts.liID + i + "]").attr("style", opts.liStyle);
+            jQuery("div[class=" + opts.liID + i + "]>iframe").attr({ "width": "100%", "height": opts.ifmH });
+        }
+    });
+    // Tabs options click event
+    jQuery("ul[class=" + opts.ulClass + "]>li").click(function() {
+        jQuery("ul[class=" + opts.ulClass + "]>li").each(function(i) {
+            jQuery(this).attr("class", "TABS001002");
+            jQuery("div[class=" + opts.liID + i + "]").hide();
+        });
+        jQuery(this).attr("class", "TABS001001");
+        jQuery("div[class=" + jQuery(this).attr("id") + "]").show();
+    });
+}
+
+
+
+/*
+* Example: ashx page or aspx page by return value: 
+*       success: "1" or "y" or "true"
+*       error  : "0" or "n" or "false"
+*
+*   addnew & modify：
+*   01、jQuery.UpdatePanelAJAX({ form: opts.selector, url: strUrl, success: function(data){ alert("Data successfully saved!"); }, error: function(data){ alert("Data fail saved!") } });
+*   delete：
+*   02-01、jQuery.UpdatePanelAJAX({ form: this.parentNode.parentNode, url: strUrl, success: function(data){ alert("Data successfully saved!"); }, error: function(data){ alert("Data fail saved!") } });
+*   02-01、jQuery.UpdatePanelAJAX({ form: this.parentNode.parentNode, url: strUrl, success: function(data){ alert("Data successfully saved!"); }, error: function(data){ alert("Data fail saved!") } });
+*/
+jQuery.UpdatePanelAJAX = function(opts) {
+    if (opts.form) {
+        var pForm = null, tmpId = null;
+        if (typeof (opts.form) == "string") {
+            pForm = document.getElementById(opts.form);
+            tmpId = opts.form;
+        }
+        if (typeof (opts.form) == "object") {
+            pForm = opts.form;  // Hyperlink in table column applications ( this.parentNode.parentNode )
+            tmpId = "DG_" + jQuery.RandomGET();
+        }
+
+        var strMask = '<div style="position:absolute;z-index:100;width:auto;height:auto;display:none;" id="pMask' + tmpId + '"></div>';
+        var strData = '<div style="position:absolute;z-index:100;width:0;height:0;display:none;" id="pData' + tmpId + '"></div>';
+        var strForm = '<form id="form' + tmpId + '" name="' + tmpId + '" method="post" target="ifrm' + tmpId + '" action="' + opts.url + '" style="width:0; height:0;"></form>';
+        jQuery(strMask + strData).appendTo(jQuery(document.body));
+        jQuery("#pData" + tmpId).html(strForm);
+
+        // string or object
+        if (typeof (opts.form) == "string") jQuery("#form" + tmpId).html(jQuery("#" + tmpId).html() + '<input type="submit" id="btn' + tmpId + '" name="btn' + tmpId + '" />');
+        if (typeof (opts.form) == "object") jQuery("#form" + tmpId).html(jQuery(opts.form).html() + '<input type="submit" id="btn' + tmpId + '" name="btn' + tmpId + '" />');
+
+        var pMask = document.getElementById("pMask" + tmpId);
+        var xleft = jQuery.FindPosX(pForm); var ytop = jQuery.FindPosY(pForm); pMask.style.top = ytop; pMask.style.left = xleft;
+        pMask.style.width = pForm.offsetWidth; pMask.style.height = pForm.offsetHeight;
+        jQuery(pMask).addClass("dgForm_pMask").css("display", "block");
+
+        jQuery.ajax({ type: 'POST', url: jQuery("#form" + tmpId).attr('action'), data: jQuery("#form" + tmpId).serialize(),
+            success: function(data) {
+                var option, removeId;
+                if (data.indexOf("{") != -1 && data.lastIndexOf("}") != -1) {
+                    data = jQuery.parseJSON(data);
+                }
+                var option = data.option ? data.option : data;
+                var removeId = data.removeId ? data.removeId : opts.removeId;
+
+                switch (option.toLowerCase()) {
+                    case "1":
+                    case "y":
+                    case "true":
+                        if (opts.success) opts.success.call(new Object(), data);
+                        if (removeId) {
+                            if (removeId.indexOf(",") == -1) jQuery("#" + removeId).hide(); else {
+                                var list = removeId.split(',');
+                                for (var i = 0; i < list.length; i++) jQuery("#" + list[i]).hide();
+                            }
+                        }
+                        break;
+                    case "0":
+                    case "n":
+                    case "false":
+                        if (opts.error) opts.error.call(new Object(), data);
+                        break;
+                    default: // debug msg
+                        alert(data);
+                        break;
+                }
+                jQuery("#pMask" + tmpId).hide();
+            }, error: function() { alert('网络问题, 请稍后再试！'); jQuery("#pMask" + tmpId).hide(); }
+        });
+    }
+    return false;
+}
+/*
+* Example:
+*   jQuery.DataMaskAJAX({ form: opts.DataContainerId
+, callback: function(pMask) {
+$.ajax({ url: opts.Url + "&page=" + pageindex, cache: false, success: function(data) { $("#" + opts.DataContainerId).html(data); $DataPagination(opts); pMask.hide(); } });
+}
+});
+*/
+jQuery.DataMaskAJAX = function(opts) {
+    if (opts.form) {
+        var pForm = null, tmpId = null;
+        if (typeof (opts.form) == "string") {
+            pForm = document.getElementById(opts.form);
+            tmpId = opts.form;
+        }
+        if (typeof (opts.form) == "object") {
+            pForm = opts.form;  // Hyperlink in table column applications ( this.parentNode.parentNode )
+            tmpId = "DG_" + jQuery.RandomGET();
+        }
+
+        var strMask = '<div style="position:absolute;z-index:100;width:auto;height:auto;display:none;" id="pMask' + tmpId + '"></div>';
+        jQuery(strMask).appendTo(jQuery(document.body));
+
+        var pMask = document.getElementById("pMask" + tmpId);
+        var xleft = jQuery.FindPosX(pForm); var ytop = jQuery.FindPosY(pForm); pMask.style.top = ytop; pMask.style.left = xleft;
+        pMask.style.width = pForm.offsetWidth; pMask.style.height = pForm.offsetHeight;
+        jQuery(pMask).addClass("dgForm_pMask").css("display", "block");
+
+        if (!opts.callback)
+            jQuery("#pMask" + tmpId).hide();
+        else
+            opts.callback.call(new Object(), jQuery("#pMask" + tmpId));
+    }
+    return false;
+}
+// AJAX 分页
+// exmaple:
+//    $.PaginationAJAX({DataContainerId:"pSecurityLockUpdate" ,PageContainerId:"pPagination2" ,Url:"PaginationAJAX.aspx?option=pSecurityLockUpdate"});
+jQuery.PaginationAJAX = function(opts) {
+    if (!opts.DataContainerId && !opts.PageContainerId) {
+        alert("请选择加载分页的容器！");
+    }
+    else {
+        jQuery("#" + opts.PageContainerId).find("a").each(function() {
+            this.href = "javascript:void(0)";
+            $(this).click(function() {
+                var pageindex = $(this).attr("pageindex");
+                jQuery("#" + opts.DataContainerId).html("");
+                jQuery.DataMaskAJAX({ form: opts.DataContainerId
+                    , callback: function(pMask) {
+                        if (opts.Url.indexOf("?") == -1) pageindex = "?page=" + pageindex; else pageindex = "&page=" + pageindex;
+                        jQuery.ajax({ url: opts.Url + pageindex, cache: false, success: function(data) { jQuery("#" + opts.DataContainerId).html(data); jQuery.PaginationAJAX(opts); pMask.hide(); } });
+                    }
+                });
+            });
+        });
+    }
+}
+// AJAX 分页
+// exmaple:
+/*    
+jQuery.DataSearchAJAX({DataContainerId:"pSecurityLockUpdate" 
+,Url:"PaginationAJAX.aspx?option=pSecurityLockUpdate" 
+,jData:{ "ToolNO": $("#ToolNO1").val(), "ToolName": $("#ddlToolName").val(), "Status": $("#ddlStatus").val() } 
+,callback:function(){ DataPagination2() } 
+});
+*/
+jQuery.DataSearchAJAX = function(opts) {
+    jQuery.DataMaskAJAX({ form: opts.DataContainerId
+        , callback: function(pMask) {
+            $.get(opts.Url, opts.jData, function(data) {
+                $("#" + opts.DataContainerId).html("");
+                $("#" + opts.DataContainerId).html(data); opts.callback.call(); pMask.hide();
+            });
+        }
+    });
+}
+
+// exmaple:   查詢獲取資料
+/*
+aspx 或 js 頁面
+-------------------------------------------------------------------------------------------------------------
+jQuery.DataController({ form: "SearchByList", url: "DataController.ashx?option=SearchByList" }
+, function(data) {
+var tmp = document.getElementById("tabDatalist");
+if (tmp.rows.length > 1) for (var i = 1; i < tmp.rows.length; ) tmp.deleteRow(tmp.rows(i).rowIndex);
+
+if (!jQuery.TimeOutValid(data)) {
+alert("系統超時, 請重新登陸!");
+window.location = "../../login.aspx?ReturnUrl=" + window.location;
+}
+else {
+var json
+if (typeof (data) == "string" && data.length > 0) {
+json = jQuery.parseJSON(data);
+$.each(json, function(i) {
+var repeate_body = "";
+repeate_body += '<tr>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + (i + 1) + '</td>';
+repeate_body += '   <td class="TAB001TD">';
+repeate_body += '       <a href="javascript:void(0)" onclick=\'alert("1")\'>修改</a>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].orderm_no + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].com_no + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].Origin + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].Destination + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].cusp_name + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].SupplierName + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].trans_type + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].ETA + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].Status + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].Location + '</td>';
+repeate_body += '   <td class="TAB001TD">&nbsp;' + json[i].Remark + '</td>';
+repeate_body += '</tr>';
+$("#tabDatalist").append(jQuery(repeate_body));
+});
+}
+}
+}
+);
+   
+ashx 頁面
+-------------------------------------------------------------------------------------------------------------
+MssqlFields fields = new MssqlFields();
+fields.Add("Option", "CW_Company");
+fields.Add("PinYin", context.Request["q"]);
+dal = new MssqlDAL(MyConfigHelper.WmbtDB, "YUL_CommonDataController_SP", fields);
+DataTable dt = dal.GetList().Tables[0];
+if (dt == null && dt.Rows.Count == 0)
+context.Response.Write("");
+else
+{
+cflist = new CommonFields[dt.Rows.Count];
+for (int i = 0; i < dt.Rows.Count; i++)
+{
+cflist[i] = new CommonFields();
+cflist[i].Add("Code", dt.Rows[i]["RowNO"]);
+cflist[i].Add("PinYin", dt.Rows[i]["PinYin"]);
+cflist[i].Add("Abbr", dt.Rows[i]["NameCHS"]);
+}
+context.Response.Write(JScriptlib.ParseJSON(cflist));
+}
+*/
+jQuery.DataController = function(opts, callback) {
+    if (opts.form) {
+        var pForm = null, tmpId = null;
+        if (typeof (opts.form) == "string") {
+            pForm = document.getElementById(opts.form);
+            tmpId = opts.form;
+        }
+        if (typeof (opts.form) == "object") {
+            pForm = opts.form;  // Hyperlink in table column applications ( this.parentNode.parentNode )
+            tmpId = "DG_" + jQuery.RandomGET();
+        }
+
+        var strMask = '<div style="position:absolute;z-index:100;width:auto;height:auto;display:none;" id="pMask' + tmpId + '"></div>';
+        var strData = '<div style="position:absolute;z-index:100;width:0;height:0;display:none;" id="pData' + tmpId + '"></div>';
+        var strForm = '<form id="form' + tmpId + '" name="' + tmpId + '" method="post" target="ifrm' + tmpId + '" action="' + opts.url + '" style="width:0; height:0;"></form>';
+        jQuery(strMask + strData).appendTo(jQuery(document.body));
+        jQuery("#pData" + tmpId).html(strForm);
+
+        // string or object
+        if (typeof (opts.form) == "string") jQuery("#form" + tmpId).html(jQuery("#" + tmpId).html() + '<input type="submit" id="btn' + tmpId + '" name="btn' + tmpId + '" />');
+        if (typeof (opts.form) == "object") jQuery("#form" + tmpId).html(jQuery(opts.form).html() + '<input type="submit" id="btn' + tmpId + '" name="btn' + tmpId + '" />');
+
+        var pMask = document.getElementById("pMask" + tmpId);
+        var xleft = jQuery.FindPosX(pForm); var ytop = jQuery.FindPosY(pForm); pMask.style.top = ytop; pMask.style.left = xleft;
+        pMask.style.width = pForm.offsetWidth; pMask.style.height = pForm.offsetHeight;
+        jQuery(pMask).addClass("dgForm_pMask").css("display", "block");
+
+        jQuery.ajax({ type: 'POST', url: jQuery("#form" + tmpId).attr('action'), data: jQuery("#form" + tmpId).serialize(),
+            success: function(data) {
+                callback.call(new Object(), data);
+                jQuery("#pMask" + tmpId).remove();
+                jQuery("#pData" + tmpId).remove();
+            }, error: function() { alert('网络问题, 请稍后再试！'); jQuery("#pMask" + tmpId).remove(); jQuery("#pData" + tmpId).remove(); }
+        });
+    }
+    return false;
+}
+
+
+/*
+// 设置cookie，到期时间
+var date = new Date();
+date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
+jQuery.Cookie(COOKIE_NAME, 'test', { path: '/', expires: date });
+    
+// 获取 cookie
+alert(jQuery.cookie(COOKIE_NAME));
+    
+// 删除cookie
+jQuery.Cookie(COOKIE_NAME, null, { path: '/' });
+*/
+jQuery.Cookie = function(name, value, options) {
+    if (typeof value != 'undefined') { // name and value given, set cookie 
+        options = options || {};
+        if (value === null) {
+            value = '';
+            options.expires = -1;
+        }
+        var expires = '';
+        if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+            var date;
+            if (typeof options.expires == 'number') {
+                date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+            } else {
+                date = options.expires;
+            }
+            expires = '; expires=' + date.toUTCString();
+        }
+        var path = options.path ? '; path=' + (options.path) : '';
+        var domain = options.domain ? '; domain=' + (options.domain) : '';
+        var secure = options.secure ? '; secure' : '';
+        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+    } else {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+}
+
+/*
+jQuery.AutoComplete({ResultID:"txtNameCHS", ValueID:"txtRowID", Url:"DataController.ashx?option=1"});
+或
+jQuery.AutoComplete({ResultID:"txtNameCHS", ValueID:"txtRowID", Width:180, Max:50, Url:"DataController.ashx?option=1"});
+或
+jQuery.AutoComplete({ResultID:"txtNameCHS", ValueID:"txtRowID", Spliter:" - ", Url:"DataController.ashx?option=1"});
+或
+jQuery.AutoComplete({ResultID:"txtNameCHS", ValueID:"txtRowID", Width:180, Max:50, Spliter:" - ", Url:"DataController.ashx?option=1"});
+*/
+jQuery.AutoComplete = function(opts) {
+    if (!opts.Width) opts.Width = 180;
+    if (!opts.Max) opts.Max = 50;
+
+    $("#" + opts.ResultID).autocomplete(opts.Url, {
+        multiple: true,
+        width: opts.Width,
+        max: opts.Max,
+        multipleSeparator: ' ',
+        dataType: 'json',
+        valueId: opts.ValueID,
+
+        parse: function(data) {
+            var rows = [];
+            if (!opts.Spliter) {
+                $.each(data, function(i) {
+                    rows[rows.length] = {
+                        data: data[i].Abbr,
+                        value: data[i].Code,
+                        result: data[i].Abbr
+                    };
+                });
+            }
+            else {
+                $.each(data, function(i) {
+                    rows[rows.length] = {
+                        data: data[i].PinYin + opts.Spliter + data[i].Abbr,
+                        value: data[i].Code,
+                        result: data[i].Abbr
+                    };
+                });
+            }
+            return rows;
+        },
+        formatItem: function(row, i, n) {
+            return row;
+        }
+    });
+}
+
+/*
+01 aspx 或 html 頁面
+-----------------------------------------------------------------------------
+jQuery.WebService({url:"../../Common/DataController.asmx/GetSystemDate"
+, data: "{format:'yyyy-MM-dd', days:0}"
+});
+    
+02 asmx 頁面
+-----------------------------------------------------------------------------
+[WebMethod]
+public string GetSystemDate(string format, double days)
+{
+string tmpDate = String.Format("{0:" + format + "}", DateTime.Now);
+if (days != 0) 
+tmpDate = String.Format("{0:" + format + "}", DateTime.Now.AddDays(days));
+return tmpDate;
+}
+*/
+jQuery.WebService = function(opts) {
+    var jdata = $.ajax({ type: "POST"
+        , contentType: "application/json; charset=utf-8"
+        , url: opts.url
+        , dataType: "json"
+        , data: opts.data
+        , error: function(x, e) { alert(x.responseText); }
+        //, complete: function(x) { alert(x.responseText); }
+        , async: false
+    }).responseText;
+    return jQuery.parseJSON(jdata).d;
+}
+
+/*
+jQuery.TimeOutValid();
+*/
+jQuery.TimeOutValid = function() {
+    var bFlag = true;
+    var strUrl = jQuery.Cookie("CONTEXTPATH") + "Common/myplugin/TimeOutValid.ashx";
+    var data = $.ajax({ url: strUrl, async: false }).responseText;
+    if (typeof (data) == "string") {
+        if (data.indexOf("<!DOCTYPE html PUBLIC") != -1) bFlag = false;
+    }
+    return bFlag;
+}
+
+
+/*
+加密:
+var text = jQuery.Compile("脚本加解密");
+*/
+jQuery.Compile = function(code) {
+    var c = String.fromCharCode(code.charCodeAt(0) + code.length);
+    for (var i = 1; i < code.length; i++) {
+        c += String.fromCharCode(code.charCodeAt(i) + code.charCodeAt(i - 1));
+    }
+    return escape(c);
+}
+/*
+解密:
+var  text = jQuery.Compile("脚本加解密");
+var value = jQuery.UnCompile(text);
+*/
+jQuery.UnCompile = function(code) {
+    code = unescape(code);
+    var c = String.fromCharCode(code.charCodeAt(0) - code.length);
+    for (var i = 1; i < code.length; i++) {
+        c += String.fromCharCode(code.charCodeAt(i) - c.charCodeAt(i - 1));
+    }
+    return c;
+}
+/*
+C# JS汉字和Unicode编码互转
+    
+加密:
+var text = jQuery.ToGB2Unicode("脚本加解密");
+*/
+jQuery.ToGB2Unicode = function(code) {
+    return escape(code).replace(/%/g, "\\").toLowerCase();
+}
+/*
+C# JS汉字和Unicode编码互转
+        
+解密:
+var  text = jQuery.ToGB2Unicode("脚本加解密");
+var value = jQuery.ToUnicode2GB(text);
+*/
+jQuery.ToUnicode2GB = function(code) {
+    return unescape(code.replace(/\\/g, "%"));
+}
+
+/*
+可拖动层，例: $("#dropMoveDiv").MoveDIV();
+*/
+$.fn.extend({ MoveDIV: function() {
+    var Coordinate = function() { };
+    Coordinate.offsetX = 0;
+    Coordinate.offsetY = 0;
+    Coordinate.Obj = this;
+    state = false;
+    $(this).mousedown(function(event) {
+        state = true;
+        Coordinate.offsetX = event.offsetX;
+        Coordinate.offsetY = event.offsetY;
+    });
+    $(this).mouseup(function() {
+        state = false;
+    });
+
+    $("body").mousemove(function(event) {
+        if (state) {
+            var leftP = event.clientX - Coordinate.offsetX;
+            var TopP = event.clientY - Coordinate.offsetY;
+            $(Coordinate.Obj).css({ "left": leftP, "top": TopP });
+        }
+    });
+}
+});

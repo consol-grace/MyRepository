@@ -1,0 +1,176 @@
+<%@ WebHandler Language="C#" Class="uploadify" %>
+
+using System;
+using System.Web;
+using System.IO;
+using System.Data;
+using DIYGENS.COM.FileLL;
+using DIYGENS.COM.CommonLL;
+using DIYGENS.COM.BASECLASS;
+using DIYGENS.COM.FRAMEWORK;
+
+public class uploadify : DIYGENS.COM.BASECLASS.ControllerBase
+{
+    public override void Page_Load(object sender, EventArgs e)
+    {
+        this.Option = Request["Option"].ToLower();
+        JSONlib json = new JSONlib();
+        
+        // 下载文件
+        if (this.Option == "download")
+        {
+            string OriginName = UrlDecode(Request["OriginName"]);
+            string filename = UrlDecode(Request["filename"]);
+            filename = Urllib.RealPath + "uploads/" + filename;
+            Filelib.Instance.FileDownload(filename, OriginName);
+        }
+        
+        // 删除资料
+        if (this.Option == "delete")
+        {
+            string RowID = Request["RowID"];
+            this.InitVariable(ContentType.DEFAULT);
+            this.IDAL.ConnectionString = MyConfigHelper.UploadifyDB;
+            this.IDAL.CmdText = "WebUploadify_SP";
+            this.IFields.Add("Option", "delete");
+            this.IFields.Add("RowID", RowID);
+            this.IDAL.DataSource.Add(this.IFields);
+            bool bFlag = this.IDAL.Update();
+
+            json = new JSONlib();
+            if (!bFlag)
+                json.Add("Option", "false");
+            else
+            {
+                json.Add("Option", "true");
+                json.Add("RemoveID", Request["RemoveID"]);
+
+                string filename = Urllib.RealPath + "uploads/" + UrlDecode(Request["filename"]);
+                Filelib.Instance.DeleteFile(filename);
+            }
+            Response.Write(json.JEnd().GET());
+        }
+        
+        // 删除选中
+        if (this.Option == "delete-select")
+        {
+            string RowIDAndFilename = Request["chkUploadify"];
+            string RowIDs = string.Empty, Filename = string.Empty;
+            if (RowIDAndFilename.IndexOf(",") == -1)
+            {
+                RowIDs = RowIDAndFilename.Split(';')[0];
+                Filename = RowIDAndFilename.Split(';')[1];
+            }
+            else
+            {
+                string[] list = RowIDAndFilename.Split(',');
+                for (int i = 0; i < list.Length; i++)
+                {
+                    RowIDs += "," + list[i].Split(';')[0];
+                    Filename += "," + list[i].Split(';')[1];
+                }
+            }
+            RowIDs = RowIDs.IndexOf(",") != -1 ? RowIDs.Substring(1, RowIDs.Length - 1) : RowIDs;
+            Filename = Filename.IndexOf(",") != -1 ? Filename.Substring(1, Filename.Length - 1) : Filename;
+            
+            this.InitVariable();
+            this.IDAL.ConnectionString = MyConfigHelper.UploadifyDB;
+            this.IDAL.CmdText = "WebUploadify_SP";
+            this.IFields.Add("Option", "delete-select");
+            this.IFields.Add("RowIDs", RowIDs);
+            this.IDAL.DataSource.Add(this.IFields);
+            bool bFlag = this.IDAL.Update();
+            //bool bFlag = true;
+            
+            json = new JSONlib();
+            if (bFlag)
+            {
+                string fileName = string.Empty;
+                if (RowIDs.IndexOf(",") == -1)
+                {
+                    json.Add("Option", "true").Add("RemoveID", RowIDs).JEnd();
+
+                    fileName = Urllib.RealPath + "uploads/" + UrlDecode(Filename);
+                    Filelib.Instance.DeleteFile(fileName);
+                }
+                else
+                {
+                    string[] list = RowIDs.Split(',');
+                    for (int i = 0; i < list.Length; i++)
+                    {
+                        json.Add("Option", "true").Add("RemoveID", list[i]).JEnd();
+
+                        fileName = Urllib.RealPath + "uploads/" + UrlDecode(Filename.Split(',')[i]);
+                        Filelib.Instance.DeleteFile(fileName);
+                    }
+                }
+            }
+            else
+            {
+                json.Add("Option", "false").JEnd();
+            }
+            Response.Write(json.GET());
+        }
+        
+        // 获取资料
+        if (this.Option == "list")
+        {
+            string OrderID = Request["OrderID"], TableName = Request["TableName"];
+            this.InitVariable(ContentType.DEFAULT);
+            this.IDAL.ConnectionString = MyConfigHelper.UploadifyDB;
+            this.IDAL.CmdText = "WebUploadify_SP";
+            this.IFields.Add("Option", "list");
+            this.IFields.Add("OrderID", OrderID);
+            this.IFields.Add("TableName", TableName);
+            this.IDAL.DataSource.Add(this.IFields);
+
+            DataTable dt = this.IDAL.GetTable();            
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                this.ReturnValue = string.Empty;
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string Html9 = "<input type=\\\"checkbox\\\" name=\\\"chkUploadify\\\" value='" + dt.Rows[i]["RowID"] + ";" + UrlEncode(dt.Rows[i]["NewFile"]) + "' />";
+                    string Html0 = "<a href='javascript:void(0)' onclick='Myplugin.UI.Uploadify.Delete({selector:this, RowID:\\\"" + dt.Rows[i]["RowID"] + "\\\", RemoveID:\\\"Tr" + i.ToString() + "\\\", FileName:\\\"" + UrlEncode(dt.Rows[i]["NewFile"]) + "\\\"})'>删除</a>";
+                    string Html1 = (i + 1).ToString();
+                    string Html2 = "<a href='javascript:void(0)' onclick='Myplugin.UI.Uploadify.Download(\\\"" + UrlEncode(dt.Rows[i]["NewFile"]) + "\\\",\\\"" + UrlEncode(dt.Rows[i]["OriginFile"]) + "\\\")'>" + dt.Rows[i]["OriginFile"] + "</a>";
+                    this.ReturnValue += (",[{html:\"{9}\",className:\"TAB001TD\"},{html:\"{0}\",className:\"TAB001TD\"},{html:\"{1}\",className:\"TAB001TD\"},{html:\"{2}\",className:\"TAB001TD\"},{html:\"{3}\",className:\"TAB001TD\"},{html:\"{4}\",className:\"TAB001TD\"},{html:\"{5}\",className:\"TAB001TD\"},{html:\"{6}\",className:\"TAB001TD\"}]")
+                        .Replace("{9}", Html9)
+                        .Replace("{0}", Html0)
+                        .Replace("{1}", Html1)
+                        .Replace("{2}", Html2)
+                        .Replace("{3}", dt.Rows[i]["NewFile"].ToString().Replace(@"\", "\\"))
+                        .Replace("{4}", dt.Rows[i]["FileSize"].ToString())
+                        .Replace("{5}", dt.Rows[i]["Creator"].ToString())
+                        .Replace("{6}", dt.Rows[i]["UploadDate"].ToString());
+                }
+                this.ReturnValue = "[" + this.ReturnValue.Substring(1, this.ReturnValue.Length - 1) + "]";
+            }
+            else
+            {
+                this.ReturnValue = "{Option:\"false\"}";
+            }
+            Response.Write(this.ReturnValue);
+        }
+    }
+
+    /// <summary>
+    /// QueryString传值方式加密
+    /// </summary>
+    /// <param name="encrypt"></param>
+    /// <returns></returns>
+    protected string UrlEncode(object encrypt)
+    {
+        return new Securitylib("20080526").Encrypt(encrypt);
+    }
+
+    /// <summary>
+    /// QueryString传值方式解密
+    /// </summary>
+    /// <param name="decrype"></param>
+    /// <returns></returns>
+    private string UrlDecode(object decrype)
+    {
+        return new Securitylib("20080526").Decrypt(decrype);
+    }
+}

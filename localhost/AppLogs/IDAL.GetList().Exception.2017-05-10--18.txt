@@ -1,0 +1,24 @@
+2017-05-10 18:11:23	Incorrect syntax near ','.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:11:26	Incorrect syntax near ','.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:11:29	Incorrect syntax near ','.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:11:38	Incorrect syntax near ','.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:14:57	Could not find stored procedure 'FW_BasicData_FW_COMPANY_BindCheck_SP'.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:15:18	Could not find stored procedure 'FW_BasicData_FW_COMPANY_BindCheck_SP'.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:15:24	Could not find stored procedure 'FW_BasicData_FW_COMPANY_BindCheck_SP'.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:16:00	Could not find stored procedure 'FW_BasicData_FW_COMPANY_BindCheck_SP'.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:16:08	Could not find stored procedure 'FW_BasicData_FW_COMPANY_BindCheck_SP'.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:16:20	Could not find stored procedure 'FW_BasicData_FW_COMPANY_BindCheck_SP'.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:16:39	Could not find stored procedure 'FW_BasicData_FW_COMPANY_BindCheck_SP'.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-10 18:16:46	Could not find stored procedure 'FW_BasicData_FW_COMPANY_BindCheck_SP'.，请检查 SQL 语句 或 存储过程是否正确!
+

@@ -1,0 +1,1 @@
+exec FW_EDILog_sp @option='update',@el_ediseed ='0',@el_stat ='',@el_sys='',@el_seed='0',@el_groupid='',@el_filename='HKGOE1606001_978.xml',@el_issent='1', @el_Message='226 Binary transfer complete. STOR: 22,028 bytes.',@el_user='system', @el_action='FtpClient.SendCommand',@el_status='226' 

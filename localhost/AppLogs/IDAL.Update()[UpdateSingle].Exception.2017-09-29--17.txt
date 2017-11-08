@@ -1,0 +1,3 @@
+2017-09-29 17:38:59	Incorrect syntax near ')'.
+Incorrect syntax near ')'.
+

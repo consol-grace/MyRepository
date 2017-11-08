@@ -1,0 +1,4 @@
+border color: #AAAAAA
+table th bg: #EFEFEF
+shade bg: #E6E6E6
+

@@ -1,0 +1,562 @@
+﻿/*body a
+{
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+body input
+{
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}*/
+
+.tr_line td b{color: #F255AF !important; font-weight:bold;}
+
+.chkStatus
+{
+	font-size: 11px;
+	background-image: url(/images/ck.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+.chkedStatus
+{
+	font-size: 11px;
+	background-image: url(/images/kck.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+.table_grid td
+{
+	border-left: solid 0px #fff;
+	border-right: solid 1px #f0f0f0;
+	border-top: solid 1px #fff;
+	border-bottom: solid 1px #ededed;
+	text-align: center;
+	vertical-align: top;
+	color: #000;
+	padding: 4px;
+}
+.table_grid
+{
+	border: solid 1px #99BBE8;
+	border: solid 1px #99BBE8;
+}
+.table_grid tr.td_header
+{
+	background-image: url(../../images/html_img/T_bg_01.jpg) !important;
+	border-bottom: solid 1px #d0d0d0;
+	height: 24px;
+}
+.table_grid tr.td_header td
+{
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	border-left: solid 1px #ffffff;
+	border-right: solid 1px #d0d0d0;
+	border-bottom: solid 1px #d0d0d0;
+	vertical-align: middle;
+	padding: 0px 4px;
+}
+.table_grid tr.td_header td.border_none
+{
+	border-left: 0px !important;
+}
+.table_grid td.td_key
+{
+	text-align: left;
+}
+.table_grid td span.span_left
+{
+	text-align: left;
+	float: left;
+	display: block;
+	width: 30px;
+}
+.table_grid td span.span_right
+{
+	float: right;
+	display: block;
+	text-align: right;
+	width: 40px;
+}
+.table_grid table td, .table_grid table
+{
+	border: 0;
+	padding: 0px;
+	margin: 0px;
+}
+.table_grid a
+{
+	color: Blue;
+	text-decoration: underline;
+}
+.btn_printtwo1
+{
+	border: 0px;
+	cursor: pointer;
+	background-image: url(/images/html_img/46.png);
+	background-position: 0px center;
+	background-repeat: no-repeat;
+	height: 20px;
+	text-align: left;
+	text-indent: 23px;
+	font-size: 9px !important;
+	font-weight: bold;
+	color: #000 !important;
+	display: block;
+	text-decoration: none !important;
+	line-height: 18px;
+	margin: auto;
+	width: 46px;
+	float: left;
+}
+.btn_printtwo2
+{
+	border: 0px;
+	cursor: pointer;
+	background-image: url(/images/html_img/61.png);
+	background-position: 0px center;
+	background-repeat: no-repeat;
+	height: 20px;
+	text-align: left;
+	text-indent: 23px;
+	font-size: 9px !important;
+	font-weight: bold;
+	color: #000 !important;
+	display: block;
+	text-decoration: none !important;
+	line-height: 18px;
+	margin: auto;
+	margin-right: 2px;
+	width: 61px;
+	float: right;
+}
+.btn_print
+{
+	border: 0px;
+	cursor: pointer;
+	background-image: url(/images/html_img/01_2.png);
+	background-position: 0px center;
+	background-repeat: no-repeat;
+	height: 20px;
+	text-align: left;
+	text-indent: 28px;
+	font-size: 9px !important;
+	font-weight: bold;
+	color: #000 !important;
+	display: block;
+	text-decoration: none !important;
+	line-height: 18px;
+	margin: auto;
+	width: 110px;
+}
+.btn_print_80
+{
+	background-image: url(/images/html_img/01_2.png);
+}
+.btn_print_h
+{
+	background-image: url(/images/html_img/01_3.png);
+	height: 33px;
+	line-height: normal;
+}
+.btn_print_100
+{
+	width: 100px;
+	background-image: url(/images/btn_print/100px.jpg);
+}
+.btn_print_110
+{
+	width: 110px;
+	background-image: url(/images/btn_print/110px.jpg);
+}
+.btn_print_120
+{
+	width: 120px;
+	background-image: url(/images/btn_print/120px.jpg);
+}
+.btn_ShipmentOrder
+{
+	font-family: "微软雅黑" !important;
+	font-size: 11px !important;
+	font-weight: normal;
+}
+
+.btn_add
+{
+	cursor: pointer;
+	font-size: 9px !important;
+	font-weight: bold;
+	color: #000 !important;
+	display: block;
+	text-decoration: none !important;
+	width: 80px;
+	margin: auto;
+	line-height: 18px;
+	background-image: url(/images/html_img/01_1.png);
+	height: 20px;
+}
+table.table_wt
+{
+	width: 100%;
+}
+
+table.table_wt td.td_left
+{
+	text-align: left;
+}
+table.table_wt td.td_right
+{
+	text-align: right;
+}
+
+.table_grid span.a_span
+{
+	display: block;
+	line-height: 15px;
+	height: 12px;
+	width: 110px;
+}
+.table_grid span.span_up
+{
+	padding-top: 2px;
+}
+
+
+/* BTN MBL */
+
+.btn_M
+{
+	background-image: url(/images/html_img/01_1.png);
+}
+
+.btn_print_M_20
+{
+	background-image: url(/images/html_img/01_2.png);
+}
+
+.btn_print_M_30
+{
+	background-image: url(/images/html_img/01_3.png);
+	height: 33px;
+	line-height: normal;
+}
+
+/* BTN LINV */
+
+.btn_L
+{
+	background-image: url(/images/html_img/05_1.png);
+}
+
+.btn_print_L_20
+{
+	background-image: url(/images/html_img/05_2.png);
+}
+
+.btn_print_L_30
+{
+	background-image: url(/images/html_img/05_3.png);
+	height: 33px;
+	line-height: normal;
+}
+
+/* BTN HBL */
+
+.btn_H
+{
+	background-image: url(/images/html_img/03_1.png);
+}
+
+.btn_print_H_20
+{
+	background-image: url(/images/html_img/03_2.png);
+}
+
+.btn_print_H_30
+{
+	background-image: url(/images/html_img/03_3.png);
+	height: 33px;
+	line-height: normal;
+}
+
+/* BTN CTNR */
+
+.btn_C
+{
+	background-image: url(/images/html_img/04_1.png);
+}
+
+.btn_print_C_20
+{
+	background-image: url(/images/html_img/04_2.png);
+}
+
+.btn_print_C_30
+{
+	background-image: url(/images/html_img/04_3.png);
+	height: 33px;
+	line-height: normal;
+}
+
+/* BTN cl */
+.btn_CL
+{
+	background-image: url(/images/html_img/02_1.png);
+}
+
+.btn_print_CL_20
+{
+	background-image: url(/images/html_img/02_2.png);
+}
+
+.btn_print_CL_30
+{
+	background-image: url(/images/html_img/02_3.png);
+	height: 33px;
+	line-height: normal;
+}
+
+/* BTN sb */
+.btn_V
+{
+	background-image: url(/images/html_img/06_1.png);
+	color: Red !important;
+}
+
+.btn_print_V_20
+{
+	background-image: url(/images/html_img/06_2.png);
+}
+
+.btn_print_V_30
+{
+	background-image: url(/images/html_img/06_3.png);
+	height: 33px;
+	line-height: normal;
+}
+
+/*---------核销单-----------*/
+.input_button
+{
+	background-image: url(/images/btn_save_02.jpg);
+	height: 22px;
+	width: 60px;
+	border: 0px;
+	cursor: pointer;
+	font-weight: bold;
+	font-family: "微软雅黑" !important;
+font-size: 11px !important;
+}
+
+#win_show
+{
+	z-index: 888 !important;
+}
+#win_close
+{
+	z-index: 889 !important;
+}
+#div_sheet
+{
+	z-index: 889 !important;
+}
+input[type="checkbox"]
+{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 15px;
+	height: 15px;
+}
+.tab_sheet td
+{
+	border-right: solid 1px #cdcdcd;
+	border-bottom: solid 1px #cdcdcd;
+	padding: 3px 8px;
+}
+.tab_sheet
+{
+	border: 1px solid #99bbe8;
+	border-bottom: solid 1px #99bbe8;
+	font-family: "微软雅黑";
+	font-size: 12px;
+}
+#tab_Replist td
+{
+	border-left: solid 0px #99bbe8;
+	height: 20px;
+	padding: 0px;
+	text-align: center;
+}
+
+.td_checkbox
+{
+	width: 30px;
+	padding: 0px;
+}
+
+.td_Sheet
+{
+	width: 90px;
+	padding: 0px;
+}
+.td_pkg, .td_gwt, .td_cbm
+{
+	width: 50;
+	padding: 0px;
+}
+.td_req
+{
+	width: 70px;
+	padding: 0px;
+}
+.td_goods
+{
+	width: 90px;
+	padding: 0px;
+}
+.td_hbl
+{
+	width: 90px;
+	padding: 0px;
+}
+.td_rec
+{
+	width: 80px;
+	padding: 0px;
+	text-align:right !important;
+}
+.td_remark
+{
+	width:80px; padding:0;
+	}
+.td_action
+{
+	width: 38px;
+	padding: 0px;
+}
+.td_blank
+{
+	width: 16px;
+	padding: 0px;
+	border-right: solid 0px #fff !important;
+}
+.tr_header td
+{
+	text-align: center;
+	background-image: url(/images/html_img/T_bg_01.jpg);
+	height: 18px;
+	padding: 0px;
+	margin: 0px;
+	text-indent: 0px;
+	line-height: 20px;
+}
+
+.btn_Rec
+{
+	width:35px; cursor:pointer;
+	border:ouset 1px #ccc; background:#efefef;
+	}
+
+.btn_sheet, .btn_Offical
+{
+	font-family: "微软雅黑" !important;
+	font-size: 11px !important;
+	font-weight: normal;
+	height: 20px !important;
+	background-position: center center;
+	line-height: 21px;
+}
+
+span.span
+{
+	text-align: center;
+	color: #B28103;
+	display: block;
+}
+
+#tab_Replist div
+{
+	background-image: url(/images/detete_12.jpg);
+	background-position: center 0px;
+	background-repeat: no-repeat;
+	height: 17px;
+	line-height: 16px;
+	margin-top: 1px;
+	font-family: "微软雅黑" !important;
+	font-size: 11px !important;
+	font-weight: normal;
+}
+
+#tab_Replist select
+{
+	direction:inherit;
+}
+#tab_Replist input[type="checkbox"]
+{
+	border: solid 1px #fff;
+}
+
+#txtSheetNO, #txtPKG
+{
+	border: solid 1px #ddd;
+	height: 15px;
+	padding: 1px 2px;
+	line-height: 15px;
+}
+
+#btn_insert
+{
+	background-image: url(/images/btn_save_02.jpg);
+	height: 22px;
+	width: 60px;
+	border: 0px;
+	cursor: pointer;
+	line-height: 25px;
+}
+
+#tab_Replist input[type="text"], #tab_Replist select
+{
+	border: solid 1px #fff;
+	border-bottom: solid 1px #ddd;
+	padding: 1px 0px 1px 0px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	width: 90%;
+	text-transform: uppercase;
+	font-family: "微软雅黑" !important;
+	font-size: 11px !important;
+}
+
+.hover
+{
+	border: solid 1px #7eadd9 !important;
+}
+
+#tab_Replist div a
+{
+	text-decoration: none;
+	color: #333;
+	font-family: "黑体";
+	font-size: 12px;
+}
+td.td_title
+{
+	border: 0px;
+	border-bottom: 1px solid #99BBE8;
+	background-image: url(/images/bg_line_3.jpg);
+	height: 19px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+}
+tr.tr_header td
+{
+	font-family: "微软雅黑";
+	font-size: 11px;
+	line-height: 20px;
+	padding-top: 3px;
+}

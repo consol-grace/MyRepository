@@ -1,0 +1,2 @@
+2017-04-20 16:43:46	Error converting data type nvarchar to datetime.，请检查 SQL 语句 或 存储过程是否正确!
+

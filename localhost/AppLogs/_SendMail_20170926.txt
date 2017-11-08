@@ -1,0 +1,8 @@
+【2017-09-26 15:41:23】Host: 192.168.1.4 ; MailFrom: operation@consol-can.com ; MailTo: 245135336@qq.com;  ;Status: failure!  Error Msg: User not local; please try a different path. The server response was: This mail server requires authentication before sending mail from a locally hosted domain. Please reconfigure your mail client to authenticate before sending mail.
+
+【2017-09-26 15:43:11】Host: 192.168.1.4 ; MailFrom: operation@consol-can.com ; MailTo: 245135336@qq.com;  ;Status: failure!  Error Msg: User not local; please try a different path. The server response was: This mail server requires authentication before sending mail from a locally hosted domain. Please reconfigure your mail client to authenticate before sending mail.
+
+【2017-09-26 15:49:09】Host: 192.168.1.4 ; MailFrom: operation@consol-can.com ; MailTo: 245135336@qq.com;  ;Status: failure!  Error Msg: User not local; please try a different path. The server response was: This mail server requires authentication before sending mail from a locally hosted domain. Please reconfigure your mail client to authenticate before sending mail.
+
+【2017-09-26 15:54:38】Host: 192.168.1.4 ; MailFrom: operation@consol-can.com ; MailTo:  ;Status: failure!  Error Msg: The specified string is not in the form required for a subject.
+

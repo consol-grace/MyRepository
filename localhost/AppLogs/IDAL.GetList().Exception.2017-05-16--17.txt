@@ -1,0 +1,10 @@
+2017-05-16 17:02:49	Conversion failed when converting the nvarchar value '16/10/5581 0:00:00' to data type int.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 17:03:23	Conversion failed when converting the nvarchar value '16/10/5581 0:00:00' to data type int.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 17:09:31	Conversion failed when converting the nvarchar value '16/10/5581 0:00:00' to data type int.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 17:12:08	Conversion failed when converting the nvarchar value '16/10/5581 0:00:00' to data type int.，请检查 SQL 语句 或 存储过程是否正确!
+
+2017-05-16 17:14:02	Conversion failed when converting the nvarchar value '16/10/5581 0:00:00' to data type int.，请检查 SQL 语句 或 存储过程是否正确!
+

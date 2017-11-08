@@ -1,0 +1,68 @@
+<%@ WebHandler Language="C#" Class="UploadifyController" %>
+
+using System;
+using System.IO;
+using System.Web;
+using System.Data;
+using DIYGENS.COM.FileLL;
+using DIYGENS.COM.CommonLL;
+using DIYGENS.COM.BASECLASS;
+using DIYGENS.COM.FRAMEWORK;
+
+public class UploadifyController : DIYGENS.COM.BASECLASS.ControllerBase
+{
+    public override void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            object UploadUser = "Guest", UploadAuthority = DBNull.Value;
+            try { 
+                UploadUser = FSecurityHelper.CurrentUserDataGET()[0];
+                UploadAuthority = FSecurityHelper.CurrentUserDataGET()[1];
+            } catch { UploadUser = "Guest"; }
+            string Folder = Request["folder"].Split(';')[0];
+            string strUploadPath = this.Context.Server.MapPath(Folder) + string.Format(@"\{0}\", UploadUser);
+            if (Directory.Exists(strUploadPath) == false) Directory.CreateDirectory(strUploadPath);
+            string OriginName = string.Empty, NewName = string.Empty;
+            
+            
+            for (int i = 0; i < Request.Files.Count; i++)
+            {
+                HttpPostedFile postedFile = Request.Files[i];
+                //string fileName = strUploadPath + Path.GetFileName(postedFile.FileName);
+                NewName = Filelib.Instance.GetNewName("DG-", postedFile.FileName);
+                string fileName = strUploadPath + NewName;
+                postedFile.SaveAs(fileName);
+                Response.Write(fileName);
+                
+                // 保存资料到资料库
+                NewName = UploadUser + @"\" + NewName;
+                OriginName = Path.GetFileName(postedFile.FileName);
+                
+                object objFileSize = null;
+                double iFileSize = postedFile.ContentLength;
+                if (iFileSize > 1048576) objFileSize = String.Format("{0:#.##}", (iFileSize / 1048576)) + " M";
+                if (iFileSize < 1048576 && iFileSize > 1024) objFileSize = String.Format("{0:#.##}", (iFileSize / 1024)) + " K";
+                if (iFileSize < 1024) objFileSize = iFileSize + " B";
+
+                this.InitVariable();
+                this.IDAL.ConnectionString = MyConfigHelper.UploadifyDB;
+                this.IDAL.CmdText = "WebUploadify_SP";
+                this.IFields.Add("Option", "addnew");
+                this.IFields.Add("UserName", UploadUser);
+                this.IFields.Add("AuthorityID", UploadAuthority);
+                this.IFields.Add("OrderID", Request["folder"].Split(';')[1]);
+                this.IFields.Add("TableName", Request["folder"].Split(';')[2]);
+                this.IFields.Add("OriginFile", OriginName);
+                this.IFields.Add("NewFile", NewName);
+                this.IFields.Add("FileSize", objFileSize);
+                this.IDAL.DataSource.Add(this.IFields);
+                this.IDAL.Update();                
+            }
+        }
+        catch(Exception ex) 
+        {
+            Filelib.CreateLogExplorer("UploadifyController.Exception", ex.Message);
+        }
+    }
+}

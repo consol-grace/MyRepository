@@ -1,0 +1,2 @@
+The process cannot access the file 'C:\Users\Public\Documents\zvprt50\IMG_A4_GIF_01\save.ini' because it is being used by another process.
+

@@ -1,0 +1,28 @@
+.menu ul {
+padding:0;
+margin-top:0px;
+list-style-type: none;
+}
+
+.menu ul li {
+float:left; 
+position:relative;
+}
+
+.menu ul li a{
+font-family:Arial, Helvetica, sans-serif;
+display:block; 
+text-align:center; 
+text-decoration:none; 
+width:120px; 
+height:38px; 
+color:#000; 
+background-image:url(../images/nav_btn_1.png);
+line-height:40px; 
+font-size:12px;
+font-weight:bold;
+}
+.menu ul li:hover a {
+color:#000; 
+background-image:url(../images/nav_btn_2.png);
+}
